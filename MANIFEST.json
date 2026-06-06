@@ -1,13 +1,14 @@
 {
-  "backup_date": "2026-06-06T12:24:29.717809",
-  "project": "DEBBIE-002",
-  "company": "Uniting Technology BV",
-  "github_user": "AIhumanity-HSE-Codelco",
-  "site": "https://www.uniting-tech.com",
-  "onecom_host": "ssh.ce4qjq5sm.service.one",
-  "onecom_user": "ce4qjq5sm_ssh",
-  "sftp_path": "/customers/1/f/2/ce4qjq5sm/webroots/6afba85d",
-  "whatsapp": "+32499817670",
+  "last_updated": "2026-06-06",
+  "server": "164.92.221.55",
+  "ssh_user": "root",
+  "site_path": "/var/www/uniting-tech/public",
+  "api_path": "/var/www/uniting-tech/api",
+  "domain": "uniting-tech.com",
+  "github": "AIhumanity-HSE-Codelco/uniting-technology-web",
+  "telegram_chat_id": "6794573391",
+  "sftp_host": "ssh.ce4qjq5sm.service.one",
+  "sftp_user": "ce4qjq5sm_ssh",
   "email": "info@uniting-tech.com",
-  "instagram": "@uniting_technology"
+  "whatsapp": "+32499817670"
 }
