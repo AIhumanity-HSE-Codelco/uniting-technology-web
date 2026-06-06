@@ -3,819 +3,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uniting Technology BV — Architects, Developers and Executors of Ecosystems</title>
+<title>Uniting Technology — Architects, Developers and Executors of Ecosystems</title>
 <meta name="description" content="We design, build and operate advanced technology ecosystems for enterprise clients. AI-powered, scalable and fully automated — from Ghent, Belgium to the world.">
-<meta property="og:title" content="Uniting Technology BV — The Future. Engineered.">
-<meta property="og:description" content="Architects, Developers and Executors of Ecosystems — Ghent, Belgium">
+<meta property="og:title" content="Uniting Technology BV">
+<meta property="og:description" content="Architects, Developers and Executors of Ecosystems">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ════════════════════════════════════
-   TOKENS
-════════════════════════════════════ */
 :root {
-  --navy:       #0C1C30;
-  --navy-80:    #1A2F4A;
-  --navy-60:    #243F62;
-  --cream:      #F6F4EF;
-  --cream-dk:   #ECEAE3;
-  --white:      #FFFFFF;
-  --cyan:       #00BFDF;
-  --cyan-dk:    #0099B3;
-  --cyan-lt:    rgba(0,191,223,0.12);
-  --t1:         #0C1C30;
-  --t2:         #4A4540;
-  --t3:         #8A8178;
-  --border:     #D8D4CC;
-  --border-lt:  rgba(255,255,255,0.07);
-  --f-serif:    'Playfair Display', Georgia, serif;
-  --f-sans:     'Inter', system-ui, sans-serif;
-  --f-mono:     'DM Mono', monospace;
-  --r:          3px;
-  --shadow:     0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.05);
-  --nav-h:      60px;
+  --navy:      #0D1E35;
+  --navy-mid:  #1A3A5C;
+  --navy-lt:   #243F62;
+  --cream:     #F7F5F0;
+  --cream-dk:  #EDE9E2;
+  --cyan:      #00C4F0;
+  --cyan-dk:   #009DC4;
+  --white:     #FFFFFF;
+  --t1:        #0D1E35;
+  --t2:        #5A5248;
+  --t3:        #8A7F72;
+  --border:    #DDD8CF;
+  --serif:     'Playfair Display', Georgia, serif;
+  --sans:      'DM Sans', system-ui, sans-serif;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--t1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-/* ════════════════════════════════════
-   RESET & BASE
-════════════════════════════════════ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  font-family: var(--f-sans);
-  background: var(--cream);
-  color: var(--t1);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-img { display: block; max-width: 100%; }
-a { text-decoration: none; color: inherit; }
-button { font-family: var(--f-sans); cursor: pointer; border: none; background: none; }
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);height:64px;display:flex;align-items:center;padding:0 48px;gap:36px;border-bottom:0.5px solid rgba(255,255,255,0.07)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.nav-logo svg{width:30px;height:30px}
+.nav-logo-name{font-size:11px;font-weight:600;letter-spacing:0.15em;color:#fff;text-transform:uppercase;line-height:1}
+.nav-logo-sub{font-size:8px;letter-spacing:0.1em;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-top:3px}
+.nav-links{display:flex;gap:28px;flex:1}
+.nav-links a{font-size:11px;color:rgba(255,255,255,0.48);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s}
+.nav-links a:hover{color:rgba(255,255,255,0.9)}
+.nav-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.lang-sw{display:flex;align-items:center;gap:1px}
+.lang-sw button{background:none;border:none;font-size:10px;color:rgba(255,255,255,0.28);cursor:pointer;padding:4px 6px;font-family:var(--sans);letter-spacing:0.08em;transition:color 0.2s}
+.lang-sw button.on,.lang-sw button:hover{color:rgba(255,255,255,0.85)}
+.lang-sw span{font-size:10px;color:rgba(255,255,255,0.12)}
+.nav-btn{font-size:10px;color:var(--cyan);border:0.5px solid rgba(0,196,240,0.45);padding:8px 20px;border-radius:2px;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:all 0.2s}
+.nav-btn:hover{background:var(--cyan);color:var(--navy)}
 
-/* ════════════════════════════════════
-   LANGUAGE SYSTEM
-════════════════════════════════════ */
-[data-en], [data-es], [data-pt] { display: none; }
-body.lang-en [data-en] { display: revert; }
-body.lang-es [data-es] { display: revert; }
-body.lang-pt [data-pt] { display: revert; }
-span[data-en], span[data-es], span[data-pt] { display: none; }
-body.lang-en span[data-en] { display: inline; }
-body.lang-es span[data-es] { display: inline; }
-body.lang-pt span[data-pt] { display: inline; }
+/* ── RECOGNITION BAR ── */
+.rec-bar{background:#091629;border-bottom:0.5px solid rgba(255,255,255,0.06);padding:10px 48px;display:flex;align-items:center;gap:32px;margin-top:64px}
+.rec-lbl{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.22);flex-shrink:0}
+.rec-vdiv{width:0.5px;height:22px;background:rgba(255,255,255,0.08);flex-shrink:0}
+.rec-items{display:flex;gap:32px;flex:1}
+.rec-item{display:flex;align-items:center;gap:9px}
+.rec-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);flex-shrink:0}
+.rec-org{font-size:10px;font-weight:500;color:rgba(255,255,255,0.72);line-height:1}
+.rec-yr{font-size:9px;color:rgba(255,255,255,0.28);margin-top:2px}
 
-/* ════════════════════════════════════
-   NAVIGATION
-════════════════════════════════════ */
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-  height: var(--nav-h);
-  background: var(--navy);
-  display: flex; align-items: center;
-  padding: 0 clamp(20px, 4vw, 48px);
-  gap: 24px;
-  border-bottom: 1px solid var(--border-lt);
-  transition: box-shadow 0.3s;
-}
-.nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+/* ── HERO ── */
+.hero{display:grid;grid-template-columns:1fr 400px;min-height:580px;border-bottom:0.5px solid var(--border)}
+.hero-left{padding:68px 52px 60px 48px;display:flex;flex-direction:column;justify-content:space-between;background:var(--cream)}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+.eyebrow-line{width:30px;height:2px;background:var(--cyan);flex-shrink:0}
+.eyebrow-txt{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--t3)}
+.h1{font-family:var(--serif);font-size:50px;line-height:1.04;letter-spacing:-1.5px;color:var(--navy);font-weight:900;margin-bottom:6px}
+.h1 .c2{color:var(--cyan-dk)}
+.rule{width:44px;height:3px;background:var(--navy);margin:22px 0}
+.hero-sub{font-size:15px;line-height:1.72;color:var(--t2);max-width:430px;font-weight:300;margin-bottom:34px}
+.btns{display:flex;gap:14px;align-items:center;margin-bottom:44px}
+.btn-p{background:var(--navy);color:#fff;font-size:11px;padding:13px 26px;border-radius:2px;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;font-family:var(--sans);border:none;cursor:pointer;transition:background 0.2s;display:inline-block}
+.btn-p:hover{background:var(--navy-mid)}
+.btn-g{color:var(--navy);font-size:12px;text-decoration:none;border-bottom:1px solid var(--navy);padding-bottom:1px;font-weight:400}
+.hero-stats{display:flex;gap:32px;padding-top:26px;border-top:0.5px solid var(--border)}
+.stat-n{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--navy);line-height:1}
+.stat-l{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--t3);margin-top:4px}
 
-.nav-logo {
-  display: flex; align-items: center; gap: 12px;
-  flex-shrink: 0; text-decoration: none;
-}
-.nav-logo-svg { width: 34px; height: 38px; flex-shrink: 0; }
-.nav-logo-txt { display: flex; flex-direction: column; gap: 1px; }
-.nav-logo-name {
-  font-size: 11.5px; font-weight: 600;
-  letter-spacing: 0.18em; color: #fff;
-  text-transform: uppercase; line-height: 1;
-  white-space: nowrap;
-}
-.nav-logo-sub {
-  font-size: 7.5px; letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.28);
-  text-transform: uppercase; line-height: 1;
-  white-space: nowrap;
-}
+/* Hero right — identity panel */
+.hero-right{background:var(--navy);padding:44px 32px;display:flex;flex-direction:column}
+.panel-lbl{font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+.panel-text{font-family:var(--serif);font-size:15px;line-height:1.62;color:rgba(255,255,255,0.84);font-style:italic;margin-bottom:26px;padding-bottom:26px;border-bottom:0.5px solid rgba(255,255,255,0.07)}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto}
+.pillar{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.07);border-radius:6px;padding:12px 13px}
+.pillar-name{font-size:11px;font-weight:500;color:rgba(255,255,255,0.78);margin-bottom:3px;display:flex;align-items:center;gap:8px}
+.pillar-desc{font-size:10px;color:rgba(255,255,255,0.32);line-height:1.4}
 
-.nav-links {
-  display: flex; gap: 22px; flex: 1; justify-content: center;
-}
-.nav-links a {
-  font-size: 11px; color: rgba(255,255,255,0.45);
-  letter-spacing: 0.05em; transition: color 0.2s;
-  white-space: nowrap; font-weight: 400;
-}
-.nav-links a:hover { color: rgba(255,255,255,0.9); }
+/* ── SECTION COMMON ── */
+section{padding:76px 48px;border-bottom:0.5px solid var(--border)}
+.sec-ey{font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--t3);margin-bottom:10px}
+.sec-title{font-family:var(--serif);font-size:34px;color:var(--navy);font-weight:700;letter-spacing:-0.7px}
+.sec-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px}
+.sec-link{font-size:11px;color:var(--navy-mid);text-decoration:none;border-bottom:0.5px solid var(--navy-mid);letter-spacing:0.04em;flex-shrink:0}
 
-.nav-right {
-  display: flex; align-items: center; gap: 16px; flex-shrink: 0;
-}
-.lang-sw { display: flex; align-items: center; gap: 0; }
-.lang-sw button {
-  font-size: 10px; color: rgba(255,255,255,0.28);
-  padding: 5px 7px; transition: color 0.2s;
-  letter-spacing: 0.08em; font-weight: 500;
-  font-family: var(--f-mono);
-}
-.lang-sw button.on, .lang-sw button:hover { color: rgba(255,255,255,0.85); }
-.lang-sw span { font-size: 9px; color: rgba(255,255,255,0.12); }
+/* ── SERVICES ── */
+#services{background:var(--cream)}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border)}
+.srv-item{background:var(--cream);padding:30px 26px;transition:background 0.2s;position:relative}
+.srv-item:hover{background:#fff}
+.srv-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--cyan);transform:scaleX(0);transform-origin:left;transition:transform 0.25s}
+.srv-item:hover::before{transform:scaleX(1)}
+.srv-num{font-size:10px;color:var(--cyan-dk);font-weight:600;letter-spacing:0.12em;margin-bottom:14px}
+.srv-name{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:7px;line-height:1.3}
+.srv-desc{font-size:12px;color:var(--t2);line-height:1.65;font-weight:300}
 
-.nav-cta {
-  font-size: 10px; font-weight: 500;
-  color: var(--cyan); border: 0.5px solid rgba(0,191,223,0.5);
-  padding: 8px 18px; border-radius: var(--r);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  transition: all 0.2s; white-space: nowrap;
-}
-.nav-cta:hover { background: var(--cyan); color: var(--navy); }
+/* ── INDUSTRIES ── */
+#industries{background:var(--navy);border-color:rgba(255,255,255,0.06)}
+#industries .sec-ey{color:var(--cyan)}
+#industries .sec-title{color:#fff}
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:40px}
+.ind-card{position:relative;height:190px;border-radius:5px;overflow:hidden;cursor:pointer;text-decoration:none}
+.ind-card img{width:100%;height:100%;object-fit:cover;filter:brightness(0.38) saturate(0.6);transition:filter 0.35s,transform 0.35s}
+.ind-card:hover img{filter:brightness(0.55) saturate(0.75);transform:scale(1.04)}
+.ind-top-bar{position:absolute;top:0;left:0;right:0;height:2px;background:var(--cyan);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.ind-card:hover .ind-top-bar{transform:scaleX(1)}
+.ind-overlay{position:absolute;bottom:0;left:0;right:0;padding:14px 14px 16px;background:linear-gradient(transparent,rgba(5,15,30,0.88))}
+.ind-name{font-size:11px;font-weight:600;color:#fff;letter-spacing:0.05em;margin-bottom:3px}
+.ind-prod{font-size:9px;color:var(--cyan);letter-spacing:0.05em}
 
-/* Hamburger */
-.hamburger {
-  display: none; flex-direction: column; gap: 5px;
-  padding: 8px; cursor: pointer;
-}
-.hamburger span {
-  display: block; width: 22px; height: 1.5px;
-  background: rgba(255,255,255,0.7);
-  transition: all 0.3s; border-radius: 1px;
-}
-.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+/* ── ECOSYSTEM ── */
+#ecosystem{background:#091629;border-color:rgba(255,255,255,0.06);padding:64px 48px}
+.eco-top{display:flex;align-items:center;justify-content:space-between;gap:40px;margin-bottom:36px}
+.eco-ey{font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+.eco-h{font-family:var(--serif);font-size:30px;color:#fff;font-weight:700;letter-spacing:-0.5px;margin-bottom:8px}
+.eco-sub{font-size:13px;color:rgba(255,255,255,0.38);line-height:1.65;max-width:420px}
+.eco-cta{background:var(--cyan);color:var(--navy);font-size:11px;font-weight:700;padding:13px 26px;border-radius:2px;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.eco-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.eco-card{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.07);border-radius:6px;padding:18px 12px;text-align:center;text-decoration:none;transition:border-color 0.2s,background 0.2s;display:block}
+.eco-card:hover,.eco-card.core{border-color:rgba(0,196,240,0.45);background:rgba(0,196,240,0.06)}
+.eco-mark{width:34px;height:34px;border-radius:6px;margin:0 auto 9px;display:flex;align-items:center;justify-content:center}
+.eco-mark svg{width:18px;height:18px}
+.eco-name{font-size:10px;font-weight:600;color:rgba(255,255,255,0.72);letter-spacing:0.04em;line-height:1.3;margin-bottom:3px}
+.eco-tag{font-size:8px;color:rgba(255,255,255,0.28);letter-spacing:0.04em}
+.eco-badge{display:inline-block;font-size:8px;color:var(--cyan);border:0.5px solid rgba(0,196,240,0.4);border-radius:10px;padding:2px 7px;margin-top:5px;letter-spacing:0.06em}
 
-.mobile-menu {
-  display: none; position: fixed;
-  top: var(--nav-h); left: 0; right: 0; bottom: 0;
-  background: var(--navy); z-index: 998;
-  flex-direction: column; padding: 32px 28px;
-  gap: 0; overflow-y: auto;
-}
-.mobile-menu.open { display: flex; }
-.mobile-menu a {
-  font-size: 16px; color: rgba(255,255,255,0.7);
-  padding: 16px 0; border-bottom: 0.5px solid var(--border-lt);
-  letter-spacing: 0.03em; font-weight: 400;
-}
-.mobile-menu a:hover { color: #fff; }
-.mobile-lang {
-  display: flex; gap: 12px; margin-top: 24px; padding-top: 24px;
-  border-top: 0.5px solid var(--border-lt);
-}
-.mobile-lang button {
-  font-size: 13px; color: rgba(255,255,255,0.4);
-  padding: 6px 10px; border: 0.5px solid rgba(255,255,255,0.12);
-  border-radius: 3px; font-family: var(--f-mono);
-}
-.mobile-lang button.on { color: var(--cyan); border-color: rgba(0,191,223,0.4); }
+/* ── LOGOS BAR ── */
+.logos-bar{background:#091629;padding:14px 48px;border-top:0.5px solid rgba(255,255,255,0.05);display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.logos-lbl{font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.2);flex-shrink:0}
+.logos-vdiv{width:0.5px;height:18px;background:rgba(255,255,255,0.08);flex-shrink:0}
+.prod-lg{display:flex;align-items:center;gap:6px}
+.prod-lg-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.prod-lg-name{font-size:10px;color:rgba(255,255,255,0.38);letter-spacing:0.04em}
+.prod-lg-name sup{font-size:7px}
 
-/* ════════════════════════════════════
-   RECOGNITION BAR
-════════════════════════════════════ */
-.rec-bar {
-  margin-top: var(--nav-h);
-  background: #081525;
-  border-bottom: 1px solid var(--border-lt);
-  padding: 10px clamp(20px, 4vw, 48px);
-  display: flex; align-items: center; gap: 20px;
-  flex-wrap: wrap;
-}
-.rec-label {
-  font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(255,255,255,0.2); flex-shrink: 0; white-space: nowrap;
-  font-family: var(--f-mono);
-}
-.rec-divider { width: 1px; height: 20px; background: var(--border-lt); flex-shrink: 0; }
-.rec-list { display: flex; gap: 24px; flex-wrap: wrap; }
-.rec-item { display: flex; align-items: center; gap: 8px; }
-.rec-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); flex-shrink: 0; }
-.rec-org { font-size: 10.5px; font-weight: 500; color: rgba(255,255,255,0.68); line-height: 1; }
-.rec-yr { font-size: 9px; color: rgba(255,255,255,0.28); margin-top: 2px; font-family: var(--f-mono); }
+/* ── PRESS ── */
+#press{background:var(--cream)}
+.press-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin-top:40px}
+.press-card{background:#fff;border:0.5px solid var(--border);border-radius:6px;overflow:hidden}
+.press-card img{width:100%;height:150px;object-fit:cover;filter:saturate(0.75)}
+.press-card.featured img{height:200px}
+.press-body{padding:20px}
+.press-src{font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--t3);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.press-src-dot{width:5px;height:5px;border-radius:50%;background:var(--cyan-dk);flex-shrink:0}
+.press-title{font-size:13px;font-weight:600;color:var(--navy);line-height:1.45;margin-bottom:8px}
+.press-card.featured .press-title{font-size:15px}
+.press-excerpt{font-size:11px;color:var(--t2);line-height:1.62;margin-bottom:14px;font-weight:300}
+.press-link{font-size:10px;color:var(--navy-mid);border-bottom:0.5px solid var(--navy-mid);text-decoration:none;letter-spacing:0.04em}
 
-/* ════════════════════════════════════
-   HERO
-════════════════════════════════════ */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  min-height: calc(100vh - var(--nav-h) - 46px);
-  border-bottom: 1px solid var(--border);
-}
+/* ── RECOGNITION AWARDS ── */
+#recognition{background:var(--navy);border-color:rgba(255,255,255,0.06)}
+#recognition .sec-ey{color:var(--cyan)}
+#recognition .sec-title{color:#fff}
+.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.award{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.07);border-radius:7px;padding:28px 24px}
+.award-yr{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+.award-org{font-size:15px;font-weight:600;color:#fff;margin-bottom:8px;font-family:var(--serif)}
+.award-desc{font-size:11px;color:rgba(255,255,255,0.42);line-height:1.6}
 
-.hero-left {
-  padding: clamp(48px, 7vw, 80px) clamp(24px, 5vw, 56px) clamp(40px, 5vw, 60px) clamp(20px, 4vw, 48px);
-  display: flex; flex-direction: column; justify-content: space-between;
-  background: var(--cream);
-}
-.hero-left-top {}
+/* ── CONTACT ── */
+#contact{background:var(--cream-dk)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;margin-top:40px}
+.contact-info-item{display:flex;gap:13px;align-items:flex-start;padding:15px 0;border-bottom:0.5px solid var(--border)}
+.contact-info-item:last-child{border:none}
+.ci-icon{width:36px;height:36px;background:var(--navy);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-lbl{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+.ci-val{font-size:13px;color:var(--navy);font-weight:500;text-decoration:none;display:block}
+.ci-val:hover{color:var(--navy-mid)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-g{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+label{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--t3);font-weight:500}
+input,select,textarea{background:#fff;border:0.5px solid var(--border);border-radius:2px;padding:11px 13px;font-size:13px;font-family:var(--sans);color:var(--navy);outline:none;transition:border-color 0.2s;width:100%;-webkit-appearance:none}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan-dk)}
+textarea{height:90px;resize:vertical}
+.form-btn{background:var(--navy);color:#fff;border:none;padding:13px 28px;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;border-radius:2px;font-family:var(--sans);width:100%;transition:background 0.2s}
+.form-btn:hover{background:var(--navy-mid)}
+.form-status{margin-top:10px;font-size:12px;color:var(--navy-mid);display:none;text-align:center}
+.schedule-btn{display:flex;align-items:center;gap:10px;background:#fff;border:0.5px solid var(--border);border-radius:3px;padding:13px 16px;text-decoration:none;color:var(--navy);font-size:12px;font-weight:500;transition:border-color 0.2s;margin-top:10px;width:100%}
+.schedule-btn:hover{border-color:var(--navy-mid)}
 
-.eyebrow {
-  display: flex; align-items: center; gap: 12px;
-  margin-bottom: clamp(20px, 3vw, 32px);
-}
-.eyebrow-bar { width: 28px; height: 2px; background: var(--cyan); flex-shrink: 0; }
-.eyebrow-txt {
-  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--t3); font-family: var(--f-mono); font-weight: 400;
-}
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:52px 48px 28px;border-top:0.5px solid rgba(255,255,255,0.06)}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;padding-bottom:40px;border-bottom:0.5px solid rgba(255,255,255,0.07);margin-bottom:26px}
+.foot-tagline{font-size:12px;color:rgba(255,255,255,0.36);line-height:1.65;margin:14px 0 20px;max-width:250px;font-weight:300}
+.foot-col-t{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.22);margin-bottom:14px}
+.foot-col a{display:block;font-size:12px;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:8px;transition:color 0.2s}
+.foot-col a:hover{color:rgba(255,255,255,0.8)}
+.foot-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;gap:12px}
+.foot-copy{font-size:10px;color:rgba(255,255,255,0.18);letter-spacing:0.04em}
+.foot-prods{display:flex;gap:14px;flex-wrap:wrap}
+.foot-prod{font-size:10px;color:rgba(255,255,255,0.22);letter-spacing:0.04em}
+.foot-prod sup{font-size:7px}
 
-.h1 {
-  font-family: var(--f-serif);
-  font-size: clamp(36px, 5.5vw, 58px);
-  line-height: 1.04;
-  letter-spacing: -1.5px;
-  color: var(--navy);
-  font-weight: 900;
-  margin-bottom: 6px;
-}
-.h1 .accent { color: var(--cyan-dk); }
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:199;width:50px;height:50px;background:#128C7E;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:transform 0.2s}
+.wa-float:hover{transform:scale(1.08)}
 
-.hero-rule { width: 40px; height: 3px; background: var(--navy); margin: clamp(16px, 2.5vw, 24px) 0; }
+/* ── LANG SYSTEM ── */
+[data-en],[data-es],[data-pt]{display:none}
+body.lang-en [data-en]{display:revert}
+body.lang-es [data-es]{display:revert}
+body.lang-pt [data-pt]{display:revert}
+span[data-en],span[data-es],span[data-pt]{display:none}
+body.lang-en span[data-en]{display:inline}
+body.lang-es span[data-es]{display:inline}
+body.lang-pt span[data-pt]{display:inline}
 
-.hero-sub {
-  font-size: clamp(14px, 1.6vw, 16px);
-  line-height: 1.75;
-  color: var(--t2);
-  max-width: 460px;
-  font-weight: 300;
-  margin-bottom: clamp(24px, 3.5vw, 36px);
-  letter-spacing: 0.01em;
-}
-
-.btns { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: clamp(32px, 5vw, 52px); }
-.btn-primary {
-  display: inline-block;
-  background: var(--navy); color: #fff;
-  font-size: 11px; font-weight: 500;
-  padding: 13px 26px; border-radius: var(--r);
-  letter-spacing: 0.12em; text-transform: uppercase;
-  transition: background 0.2s; white-space: nowrap;
-}
-.btn-primary:hover { background: var(--navy-80); }
-.btn-ghost {
-  font-size: 12.5px; color: var(--navy); font-weight: 400;
-  border-bottom: 1px solid var(--navy); padding-bottom: 1px;
-  letter-spacing: 0.02em; transition: opacity 0.2s; white-space: nowrap;
-}
-.btn-ghost:hover { opacity: 0.6; }
-
-.hero-stats {
-  display: flex; gap: clamp(20px, 3vw, 36px);
-  padding-top: clamp(20px, 2.5vw, 28px);
-  border-top: 1px solid var(--border);
-  flex-wrap: wrap;
-}
-.stat-n {
-  font-family: var(--f-serif);
-  font-size: clamp(20px, 2.5vw, 28px);
-  font-weight: 700; color: var(--navy); line-height: 1;
-}
-.stat-l {
-  font-size: 8.5px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--t3); margin-top: 5px; font-family: var(--f-mono);
-}
-
-/* Hero right panel */
-.hero-right {
-  background: var(--navy);
-  padding: clamp(32px, 4vw, 48px) clamp(20px, 3vw, 36px);
-  display: flex; flex-direction: column; gap: 0;
-  border-left: 1px solid var(--border-lt);
-}
-.panel-section { margin-bottom: 24px; }
-.panel-tag {
-  font-size: 8.5px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--cyan); margin-bottom: 10px; display: block;
-  font-family: var(--f-mono);
-}
-.panel-text {
-  font-family: var(--f-serif);
-  font-size: clamp(13px, 1.3vw, 15px);
-  line-height: 1.7;
-  color: rgba(255,255,255,0.80);
-  font-style: italic;
-  font-weight: 600;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-lt);
-}
-.pillars {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-  margin-top: auto;
-}
-.pillar {
-  background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.08);
-  border-radius: 5px; padding: 13px 12px;
-}
-.pillar-name {
-  font-size: 11px; font-weight: 500;
-  color: rgba(255,255,255,0.78);
-  margin-bottom: 4px; line-height: 1.3;
-  display: flex; align-items: center; gap: 7px;
-}
-.pillar-name svg { flex-shrink: 0; }
-.pillar-desc { font-size: 10px; color: rgba(255,255,255,0.28); line-height: 1.4; }
-
-/* ════════════════════════════════════
-   SECTION COMMONS
-════════════════════════════════════ */
-section {
-  padding: clamp(52px, 7vw, 80px) clamp(20px, 4vw, 48px);
-  border-bottom: 1px solid var(--border);
-}
-.sec-head { margin-bottom: clamp(32px, 4vw, 48px); }
-.sec-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
-.sec-ey {
-  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--t3); margin-bottom: 8px; font-family: var(--f-mono);
-}
-.sec-title {
-  font-family: var(--f-serif);
-  font-size: clamp(26px, 3.5vw, 38px);
-  color: var(--navy); font-weight: 700; letter-spacing: -0.7px;
-  line-height: 1.1;
-}
-.sec-link {
-  font-size: 11px; color: var(--navy-60);
-  border-bottom: 0.5px solid var(--navy-60);
-  letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0;
-}
-.sec-link:hover { color: var(--navy); border-color: var(--navy); }
-
-/* ════════════════════════════════════
-   SERVICES
-════════════════════════════════════ */
-#services { background: var(--cream); }
-.srv-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 6px; overflow: hidden;
-}
-.srv-item {
-  background: var(--cream); padding: clamp(20px, 2.5vw, 28px) clamp(18px, 2vw, 24px);
-  position: relative; transition: background 0.2s;
-}
-.srv-item:hover { background: var(--white); }
-.srv-item::after {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: var(--cyan); transform: scaleX(0); transform-origin: left;
-  transition: transform 0.25s ease;
-}
-.srv-item:hover::after { transform: scaleX(1); }
-.srv-num {
-  font-size: 9.5px; color: var(--cyan-dk); font-weight: 500;
-  letter-spacing: 0.14em; margin-bottom: 14px; font-family: var(--f-mono);
-}
-.srv-name {
-  font-size: clamp(13px, 1.2vw, 14.5px); font-weight: 600;
-  color: var(--navy); margin-bottom: 8px; line-height: 1.35;
-}
-.srv-desc {
-  font-size: clamp(11px, 1vw, 12.5px); color: var(--t2);
-  line-height: 1.7; font-weight: 300;
-}
-
-/* ════════════════════════════════════
-   INDUSTRIES
-════════════════════════════════════ */
-#industries {
-  background: var(--navy);
-  border-color: var(--border-lt);
-  padding: clamp(52px, 7vw, 80px) clamp(20px, 4vw, 48px);
-}
-#industries .sec-ey { color: var(--cyan); }
-#industries .sec-title { color: #fff; }
-.ind-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-.ind-card {
-  position: relative; border-radius: 5px; overflow: hidden;
-  aspect-ratio: 3/4; display: block; text-decoration: none;
-}
-.ind-card img {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: brightness(0.35) saturate(0.55);
-  transition: filter 0.4s ease, transform 0.5s ease;
-}
-.ind-card:hover img { filter: brightness(0.52) saturate(0.75); transform: scale(1.04); }
-.ind-bar {
-  position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: var(--cyan); transform: scaleX(0); transform-origin: left;
-  transition: transform 0.3s ease;
-}
-.ind-card:hover .ind-bar { transform: scaleX(1); }
-.ind-overlay {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  padding: clamp(12px, 1.5vw, 16px);
-  background: linear-gradient(to top, rgba(8,20,38,0.95) 0%, rgba(8,20,38,0.6) 60%, transparent 100%);
-}
-.ind-name {
-  font-size: clamp(12px, 1.1vw, 13px); font-weight: 600;
-  color: #fff; margin-bottom: 4px; letter-spacing: 0.04em;
-  font-family: var(--f-sans);
-}
-.ind-tags { font-size: 9.5px; color: var(--cyan); letter-spacing: 0.04em; line-height: 1.4; }
-
-/* ════════════════════════════════════
-   ECOSYSTEM PORTAL
-════════════════════════════════════ */
-#ecosystem {
-  background: #081525; border-bottom: 1px solid var(--border-lt);
-  padding: clamp(48px, 6vw, 72px) clamp(20px, 4vw, 48px);
-}
-.eco-hdr {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 32px; margin-bottom: clamp(28px, 4vw, 40px); flex-wrap: wrap;
-}
-.eco-hdr-left .sec-ey { color: var(--cyan); }
-.eco-hdr-left .sec-title { color: #fff; }
-.eco-hdr-sub {
-  font-size: clamp(13px, 1.2vw, 14px); color: rgba(255,255,255,0.38);
-  line-height: 1.7; max-width: 400px; font-weight: 300; margin-top: 8px;
-}
-.eco-btn {
-  display: inline-block;
-  background: var(--cyan); color: var(--navy);
-  font-size: 10.5px; font-weight: 600;
-  padding: 12px 24px; border-radius: var(--r);
-  letter-spacing: 0.12em; text-transform: uppercase;
-  transition: all 0.2s; white-space: nowrap; flex-shrink: 0;
-}
-.eco-btn:hover { background: #fff; }
-
-.eco-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-}
-.eco-card {
-  background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.07);
-  border-radius: 6px; padding: clamp(16px, 2vw, 22px) clamp(10px, 1.5vw, 14px);
-  text-align: center; display: block; text-decoration: none;
-  transition: border-color 0.2s, background 0.2s;
-}
-.eco-card:hover, .eco-card.core {
-  border-color: rgba(0,191,223,0.45);
-  background: rgba(0,191,223,0.07);
-}
-.eco-mark {
-  width: 36px; height: 36px; border-radius: 7px;
-  margin: 0 auto clamp(8px, 1vw, 12px);
-  display: flex; align-items: center; justify-content: center;
-}
-.eco-prod-name {
-  font-size: clamp(10px, 0.9vw, 11px); font-weight: 600;
-  color: rgba(255,255,255,0.75); letter-spacing: 0.04em;
-  line-height: 1.3; margin-bottom: 4px;
-}
-.eco-prod-tag { font-size: 9px; color: rgba(255,255,255,0.28); letter-spacing: 0.03em; line-height: 1.4; }
-.eco-badge {
-  display: inline-block; font-size: 8.5px;
-  color: var(--cyan); border: 0.5px solid rgba(0,191,223,0.4);
-  border-radius: 10px; padding: 2px 8px; margin-top: 6px;
-  letter-spacing: 0.08em; font-family: var(--f-mono);
-}
-
-/* Logos strip */
-.logos-strip {
-  background: #060F1C; padding: 12px clamp(20px, 4vw, 48px);
-  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
-  border-top: 0.5px solid rgba(255,255,255,0.04);
-}
-.logos-lbl {
-  font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: rgba(255,255,255,0.18); flex-shrink: 0; font-family: var(--f-mono);
-}
-.logos-vdiv { width: 1px; height: 16px; background: var(--border-lt); flex-shrink: 0; }
-.prod-tag {
-  font-size: 10px; color: rgba(255,255,255,0.3);
-  letter-spacing: 0.04em; display: flex; align-items: center; gap: 5px;
-}
-.prod-tag-dot { width: 5px; height: 5px; border-radius: 1px; flex-shrink: 0; }
-.prod-tag sup { font-size: 7px; }
-
-/* ════════════════════════════════════
-   PRODUCT VISUAL — Real photos section
-════════════════════════════════════ */
-.product-visual {
-  background: var(--navy);
-  border-bottom: 1px solid var(--border-lt);
-  display: grid; grid-template-columns: 1fr 1fr;
-}
-.pv-left {
-  padding: clamp(40px, 5vw, 64px) clamp(24px, 4vw, 52px);
-  display: flex; flex-direction: column; justify-content: center;
-}
-.pv-right { position: relative; min-height: 360px; overflow: hidden; }
-.pv-right img {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: brightness(0.75) saturate(0.8);
-}
-.pv-tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px; font-family: var(--f-mono); }
-.pv-title { font-family: var(--f-serif); font-size: clamp(22px, 3vw, 32px); color: #fff; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 14px; }
-.pv-desc { font-size: clamp(13px, 1.2vw, 14px); color: rgba(255,255,255,0.5); line-height: 1.75; font-weight: 300; margin-bottom: 24px; }
-.pv-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 11px; color: var(--cyan); letter-spacing: 0.08em;
-  border-bottom: 0.5px solid rgba(0,191,223,0.4); padding-bottom: 2px;
-}
-
-/* ════════════════════════════════════
-   PRESS
-════════════════════════════════════ */
-#press { background: var(--cream); }
-.press-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 14px;
-}
-.press-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 6px; overflow: hidden;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.press-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
-.press-img {
-  width: 100%; object-fit: cover;
-  filter: saturate(0.7) brightness(0.95);
-}
-.press-img.tall { height: 200px; }
-.press-img.short { height: 140px; }
-.press-body { padding: clamp(16px, 2vw, 22px); }
-.press-src {
-  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--t3); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
-  font-family: var(--f-mono);
-}
-.press-src-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cyan-dk); flex-shrink: 0; }
-.press-title { font-size: clamp(12.5px, 1.2vw, 14.5px); font-weight: 600; color: var(--navy); line-height: 1.45; margin-bottom: 8px; }
-.press-excerpt { font-size: clamp(11px, 1vw, 12px); color: var(--t2); line-height: 1.7; margin-bottom: 14px; font-weight: 300; }
-.press-link { font-size: 10px; color: var(--navy-60); border-bottom: 0.5px solid var(--navy-60); }
-.press-link:hover { color: var(--navy); }
-
-/* ════════════════════════════════════
-   RECOGNITION
-════════════════════════════════════ */
-#recognition {
-  background: var(--navy); border-color: var(--border-lt);
-  padding: clamp(52px, 7vw, 80px) clamp(20px, 4vw, 48px);
-}
-#recognition .sec-ey { color: var(--cyan); }
-#recognition .sec-title { color: #fff; }
-.awards-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
-}
-.award {
-  background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.07);
-  border-radius: 6px; padding: clamp(22px, 2.5vw, 30px) clamp(18px, 2vw, 26px);
-  transition: border-color 0.2s;
-}
-.award:hover { border-color: rgba(0,191,223,0.3); }
-.award-yr {
-  font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--cyan); margin-bottom: 12px; font-family: var(--f-mono);
-}
-.award-org {
-  font-family: var(--f-serif); font-size: clamp(16px, 1.5vw, 18px);
-  color: #fff; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.3px;
-}
-.award-desc { font-size: clamp(11.5px, 1vw, 12.5px); color: rgba(255,255,255,0.38); line-height: 1.7; font-weight: 300; }
-
-/* ════════════════════════════════════
-   CONTACT
-════════════════════════════════════ */
-#contact { background: var(--cream-dk); }
-.contact-grid {
-  display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(32px, 5vw, 64px);
-}
-.contact-info {}
-.ci-item {
-  display: flex; gap: 14px; padding: clamp(14px, 1.8vw, 18px) 0;
-  border-bottom: 1px solid var(--border); align-items: flex-start;
-}
-.ci-item:last-child { border: none; }
-.ci-icon {
-  width: 36px; height: 36px; background: var(--navy);
-  border-radius: 4px; display: flex; align-items: center;
-  justify-content: center; flex-shrink: 0;
-}
-.ci-lbl {
-  font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--t3); margin-bottom: 4px; font-family: var(--f-mono);
-}
-.ci-val { font-size: clamp(12.5px, 1.1vw, 14px); color: var(--navy); font-weight: 400; line-height: 1.4; }
-.ci-val a { color: var(--navy); }
-.ci-val a:hover { color: var(--navy-60); }
-
-/* Form */
-.form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-.form-g { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
-label {
-  font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--t3); font-weight: 500; font-family: var(--f-mono);
-}
-input, select, textarea {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: var(--r); padding: 11px 13px;
-  font-size: 13.5px; font-family: var(--f-sans);
-  color: var(--t1); outline: none; width: 100%;
-  transition: border-color 0.2s;
-  -webkit-appearance: none; appearance: none;
-}
-input:focus, select:focus, textarea:focus { border-color: var(--cyan-dk); }
-input::placeholder, textarea::placeholder { color: var(--t3); font-weight: 300; }
-textarea { height: 88px; resize: vertical; }
-.form-submit {
-  width: 100%; background: var(--navy); color: #fff;
-  padding: 13px; font-size: 11px; font-weight: 500;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  border-radius: var(--r); transition: background 0.2s;
-  font-family: var(--f-sans);
-}
-.form-submit:hover { background: var(--navy-80); }
-.form-note {
-  font-size: 10.5px; color: var(--t3); text-align: center;
-  margin-top: 10px; font-weight: 300; line-height: 1.5;
-}
-.form-status { margin-top: 12px; font-size: 13px; text-align: center; display: none; }
-
-/* ════════════════════════════════════
-   FOOTER
-════════════════════════════════════ */
-footer {
-  background: var(--navy);
-  padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 48px) clamp(20px, 3vw, 28px);
-  border-top: 1px solid var(--border-lt);
-}
-.footer-top {
-  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: clamp(24px, 4vw, 48px);
-  padding-bottom: clamp(28px, 4vw, 40px);
-  border-bottom: 0.5px solid var(--border-lt);
-  margin-bottom: clamp(18px, 2.5vw, 24px);
-}
-.footer-tagline {
-  font-size: clamp(12px, 1vw, 13px); color: rgba(255,255,255,0.3);
-  line-height: 1.7; margin: 14px 0 20px;
-  font-weight: 300; max-width: 240px;
-}
-.footer-email { font-size: 12px; color: rgba(255,255,255,0.4); }
-.footer-email:hover { color: rgba(255,255,255,0.7); }
-.foot-col-t {
-  font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(255,255,255,0.2); margin-bottom: 14px; font-family: var(--f-mono);
-}
-.foot-col a {
-  display: block; font-size: 12.5px; color: rgba(255,255,255,0.42);
-  margin-bottom: 9px; transition: color 0.2s; font-weight: 300;
-}
-.foot-col a:hover { color: rgba(255,255,255,0.8); }
-.footer-bot {
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 12px;
-}
-.footer-copy { font-size: 10px; color: rgba(255,255,255,0.18); letter-spacing: 0.04em; }
-.footer-copy a { color: inherit; }
-.footer-prods { display: flex; gap: 12px; flex-wrap: wrap; }
-.footer-prod { font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 0.04em; font-family: var(--f-mono); }
-.footer-prod sup { font-size: 7px; }
-
-/* ════════════════════════════════════
-   WA FLOAT
-════════════════════════════════════ */
-.wa-float {
-  position: fixed; bottom: 24px; right: 24px; z-index: 990;
-  width: 52px; height: 52px; border-radius: 50%;
-  background: #25D366; display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25); transition: transform 0.2s;
-}
-.wa-float:hover { transform: scale(1.08); }
-
-/* ════════════════════════════════════
-   RESPONSIVE — TABLET (≤ 1024px)
-════════════════════════════════════ */
-@media (max-width: 1024px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .nav-cta { display: none; }
-
-  .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .hero-left {
-    min-height: 80vh; padding: 48px 24px 40px;
-  }
-
-  .eco-grid { grid-template-columns: repeat(3, 1fr); }
-  .ind-grid { grid-template-columns: repeat(2, 2fr); }
-  .awards-grid { grid-template-columns: 1fr 1fr; }
-  .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
-
-  .press-grid { grid-template-columns: 1fr 1fr; }
-  .press-grid .press-card:first-child { grid-column: 1 / -1; }
-  .press-img.tall { height: 220px; }
-
-  .product-visual { grid-template-columns: 1fr; }
-  .pv-right { min-height: 280px; }
-
-  .contact-grid { grid-template-columns: 1fr; }
-}
-
-/* ════════════════════════════════════
-   RESPONSIVE — MOBILE (≤ 640px)
-════════════════════════════════════ */
-@media (max-width: 640px) {
-  :root { --nav-h: 56px; }
-
-  .rec-bar { padding: 8px 20px; gap: 12px; }
-  .rec-label { display: none; }
-  .rec-divider { display: none; }
-  .rec-list { gap: 14px; }
-  .rec-org { font-size: 10px; }
-
-  .h1 { font-size: 34px; letter-spacing: -1px; }
-
-  .srv-grid { grid-template-columns: 1fr; }
-
-  .ind-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
-  .ind-card { aspect-ratio: 3/4; }
-
-  .eco-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .press-grid { grid-template-columns: 1fr; }
-  .press-img.short { height: 160px; }
-
-  .awards-grid { grid-template-columns: 1fr; }
-
-  .form-2col { grid-template-columns: 1fr; }
-
-  .footer-top { grid-template-columns: 1fr; gap: 28px; }
-  .footer-bot { flex-direction: column; align-items: flex-start; }
-  .footer-prods { display: none; }
-
-  .hero-stats { gap: 18px; }
-
-  .logos-strip { display: none; }
-}
-
-/* ════════════════════════════════════
-   ANIMATIONS
-════════════════════════════════════ */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.hero-left-top > * {
-  animation: fadeUp 0.65s ease both;
-}
-.hero-left-top > *:nth-child(1) { animation-delay: 0.05s; }
-.hero-left-top > *:nth-child(2) { animation-delay: 0.15s; }
-.hero-left-top > *:nth-child(3) { animation-delay: 0.22s; }
-.hero-left-top > *:nth-child(4) { animation-delay: 0.30s; }
-.hero-left-top > *:nth-child(5) { animation-delay: 0.38s; }
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-left>*{animation:fadeUp 0.6s ease both}
+.hero-left>*:nth-child(2){animation-delay:0.1s}
+.hero-left>*:nth-child(3){animation-delay:0.2s}
+.hero-left>*:nth-child(4){animation-delay:0.3s}
 </style>
 </head>
-<body class="lang-en" class="lang-en">
+<body class="lang-en">
 
-<!-- ══ MOBILE MENU ══ -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMobile()"><span data-en>About</span><span data-es>Nosotros</span><span data-pt>Sobre</span></a>
-  <a href="#services" onclick="closeMobile()"><span data-en>Services</span><span data-es>Servicios</span><span data-pt>Serviços</span></a>
-  <a href="#industries" onclick="closeMobile()"><span data-en>Industries</span><span data-es>Industrias</span><span data-pt>Indústrias</span></a>
-  <a href="#ecosystem" onclick="closeMobile()"><span data-en>Ecosystem</span><span data-es>Ecosistema</span><span data-pt>Ecossistema</span></a>
-  <a href="#press" onclick="closeMobile()"><span data-en>Press</span><span data-es>Prensa</span><span data-pt>Imprensa</span></a>
-  <a href="#contact" onclick="closeMobile()"><span data-en>Contact</span><span data-es>Contacto</span><span data-pt>Contato</span></a>
-  <div class="mobile-lang">
-    <button class="on" onclick="setLang('en')">EN</button>
-    <button onclick="setLang('es')">ES</button>
-    <button onclick="setLang('pt')">PT</button>
-  </div>
-</div>
-
-<!-- ══ NAV ══ -->
-<nav class="nav" id="mainNav">
+<!-- NAV -->
+<nav>
   <a href="/" class="nav-logo">
-    <svg class="nav-logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="11" height="22" rx="2" fill="#ffffff"/>
-      <rect x="20" y="1" width="11" height="22" rx="2" fill="#ffffff"/>
-      <rect x="1" y="19" width="30" height="10" rx="2" fill="#00BFDF"/>
+    <svg viewBox="0 0 30 30" fill="none">
+      <rect x="1" y="1" width="10" height="21" rx="2" fill="#fff"/>
+      <rect x="19" y="1" width="10" height="21" rx="2" fill="#fff"/>
+      <rect x="1" y="18" width="28" height="9" rx="2" fill="#00C4F0"/>
     </svg>
-    <div class="nav-logo-txt">
-      <span class="nav-logo-name">Uniting Technology</span>
-      <span class="nav-logo-sub">The Future. Engineered.</span>
+    <div>
+      <div class="nav-logo-name">Uniting Technology</div>
+      <div class="nav-logo-sub">The Future. Engineered.</div>
     </div>
   </a>
-
   <div class="nav-links">
     <a href="#about"><span data-en>About</span><span data-es>Nosotros</span><span data-pt>Sobre</span></a>
     <a href="#services"><span data-en>Services</span><span data-es>Servicios</span><span data-pt>Serviços</span></a>
@@ -824,7 +245,6 @@ footer {
     <a href="#press"><span data-en>Press</span><span data-es>Prensa</span><span data-pt>Imprensa</span></a>
     <a href="#contact"><span data-en>Contact</span><span data-es>Contacto</span><span data-pt>Contato</span></a>
   </div>
-
   <div class="nav-right">
     <div class="lang-sw">
       <button class="on" onclick="setLang('en')">EN</button>
@@ -833,470 +253,428 @@ footer {
       <span>·</span>
       <button onclick="setLang('pt')">PT</button>
     </div>
-    <a href="#contact" class="nav-cta">
-      <span data-en>Request Briefing</span>
-      <span data-es>Solicitar Briefing</span>
-      <span data-pt>Solicitar Briefing</span>
-    </a>
-    <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="#contact" class="nav-btn"><span data-en>Request Briefing</span><span data-es>Solicitar Briefing</span><span data-pt>Solicitar Briefing</span></a>
   </div>
 </nav>
 
-<!-- ══ RECOGNITION BAR ══ -->
+<!-- RECOGNITION BAR -->
 <div class="rec-bar">
-  <span class="rec-label"><span data-en>Recognized by</span><span data-es>Reconocidos por</span><span data-pt>Reconhecidos por</span></span>
-  <div class="rec-divider"></div>
-  <div class="rec-list">
+  <span class="rec-lbl"><span data-en>International Recognition</span><span data-es>Reconocimiento Internacional</span><span data-pt>Reconhecimento Internacional</span></span>
+  <div class="rec-vdiv"></div>
+  <div class="rec-items">
     <div class="rec-item">
       <div class="rec-dot"></div>
-      <div>
-        <div class="rec-org">European Union</div>
-        <div class="rec-yr">React for the Climate · 2019</div>
-      </div>
+      <div><div class="rec-org">European Union</div><div class="rec-yr">React for the Climate · 2019</div></div>
     </div>
+    <div class="rec-vdiv"></div>
     <div class="rec-item">
       <div class="rec-dot"></div>
-      <div>
-        <div class="rec-org">COP25 — United Nations</div>
-        <div class="rec-yr">Paris Agreement · Madrid 2019</div>
-      </div>
+      <div><div class="rec-org">COP25 — United Nations</div><div class="rec-yr">Paris Agreement · 2019</div></div>
     </div>
+    <div class="rec-vdiv"></div>
     <div class="rec-item">
       <div class="rec-dot"></div>
-      <div>
-        <div class="rec-org">CEPAL / ECLAC</div>
-        <div class="rec-yr">Sole LATAM System · 2020</div>
-      </div>
+      <div><div class="rec-org">CEPAL / ECLAC</div><div class="rec-yr">Sole LATAM System · 2020</div></div>
     </div>
   </div>
 </div>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <div id="about" class="hero">
   <div class="hero-left">
-    <div class="hero-left-top">
+    <div>
       <div class="eyebrow">
-        <div class="eyebrow-bar"></div>
+        <div class="eyebrow-line"></div>
         <span class="eyebrow-txt">Ghent, Belgium · Est. 2018 · Global Operations</span>
       </div>
-
-      <h1 class="h1">
-        <span data-en>Architects,<br>Developers and<br><span class="accent">Executors</span><br>of Ecosystems.</span>
-        <span data-es>Arquitectos,<br>Desarrolladores y<br><span class="accent">Ejecutores</span><br>de Ecosistemas.</span>
-        <span data-pt>Arquitetos,<br>Desenvolvedores e<br><span class="accent">Executores</span><br>de Ecossistemas.</span>
-      </h1>
-
-      <div class="hero-rule"></div>
-
+      <div class="h1">
+        <span data-en>Architects,<br>Developers and<br><span class="c2">Executors</span><br>of Ecosystems.</span>
+        <span data-es>Arquitectos,<br>Desarrolladores y<br><span class="c2">Ejecutores</span><br>de Ecosistemas.</span>
+        <span data-pt>Arquitetos,<br>Desenvolvedores e<br><span class="c2">Executores</span><br>de Ecossistemas.</span>
+      </div>
+      <div class="rule"></div>
       <p class="hero-sub">
         <span data-en>We design, build and operate advanced technology ecosystems for enterprise clients. AI-powered, scalable and fully automated — from Ghent, Belgium to the world.</span>
         <span data-es>Diseñamos, construimos y operamos ecosistemas tecnológicos avanzados para clientes enterprise. Impulsados por IA, escalables y completamente automatizados — desde Gante, Bélgica al mundo.</span>
         <span data-pt>Projetamos, construímos e operamos ecossistemas tecnológicos avançados para clientes enterprise. Com IA, escaláveis e totalmente automatizados — de Ghent, Bélgica para o mundo.</span>
       </p>
-
       <div class="btns">
-        <a href="#contact" class="btn-primary">
-          <span data-en>Request Strategic Briefing</span>
-          <span data-es>Solicitar Briefing Estratégico</span>
-          <span data-pt>Solicitar Briefing Estratégico</span>
-        </a>
-        <a href="#services" class="btn-ghost">
-          <span data-en>Our Services →</span>
-          <span data-es>Nuestros Servicios →</span>
-          <span data-pt>Nossos Serviços →</span>
-        </a>
+        <a href="#contact" class="btn-p"><span data-en>Request Strategic Briefing</span><span data-es>Solicitar Briefing Estratégico</span><span data-pt>Solicitar Briefing Estratégico</span></a>
+        <a href="#services" class="btn-g"><span data-en>Our Services →</span><span data-es>Nuestros Servicios →</span><span data-pt>Nossos Serviços →</span></a>
       </div>
     </div>
-
     <div class="hero-stats">
-      <div>
-        <div class="stat-n">3</div>
-        <div class="stat-l"><span data-en>Int'l Awards</span><span data-es>Premios Int'l</span><span data-pt>Prêmios Int'l</span></div>
-      </div>
-      <div>
-        <div class="stat-n">6</div>
-        <div class="stat-l"><span data-en>AI Products</span><span data-es>Productos IA</span><span data-pt>Produtos IA</span></div>
-      </div>
-      <div>
-        <div class="stat-n">8</div>
-        <div class="stat-l"><span data-en>Industries</span><span data-es>Industrias</span><span data-pt>Indústrias</span></div>
-      </div>
-      <div>
-        <div class="stat-n">COP25</div>
-        <div class="stat-l"><span data-en>UN Partner</span><span data-es>Socio ONU</span><span data-pt>Parceiro ONU</span></div>
-      </div>
+      <div><div class="stat-n">3</div><div class="stat-l"><span data-en>Int'l Awards</span><span data-es>Premios Int'l</span><span data-pt>Prêmios Int'l</span></div></div>
+      <div><div class="stat-n">6</div><div class="stat-l"><span data-en>AI Products</span><span data-es>Productos IA</span><span data-pt>Produtos IA</span></div></div>
+      <div><div class="stat-n">8</div><div class="stat-l"><span data-en>Industries</span><span data-es>Industrias</span><span data-pt>Indústrias</span></div></div>
+      <div><div class="stat-n">COP25</div><div class="stat-l"><span data-en>UN Partner</span><span data-es>Socio ONU</span><span data-pt>Parceiro ONU</span></div></div>
     </div>
   </div>
-
   <div class="hero-right">
-    <div class="panel-section">
-      <span class="panel-tag"><span data-en>Our Mission</span><span data-es>Nuestra Misión</span><span data-pt>Nossa Missão</span></span>
-      <p class="panel-text">
-        <span data-en>"To improve the quality of life of people and industries through new technologies — in the right balance between modernity, ecology and circular economy — in ordered, scalable and traceable systems."</span>
-        <span data-es>"Mejorar la calidad de vida de las personas e industrias a través de nuevas tecnologías — en el justo balance entre modernidad, ecología y economía circular — en sistemas ordenados, escalables y trazables."</span>
-        <span data-pt>"Melhorar a qualidade de vida das pessoas e indústrias através de novas tecnologias — no equilíbrio entre modernidade, ecologia e economia circular — em sistemas ordenados, escaláveis e rastreáveis."</span>
-      </p>
+    <div class="panel-lbl"><span data-en>Our Mission</span><span data-es>Nuestra Misión</span><span data-pt>Nossa Missão</span></div>
+    <div class="panel-text">
+      <span data-en>"To improve the quality of life of people and industries through new technologies, in the right balance between modernity, ecology and circular economy — in ordered, scalable and traceable systems."</span>
+      <span data-es>"Mejorar la calidad de vida de las personas e industrias a través de nuevas tecnologías, en el justo balance entre modernidad, ecología y economía circular — en sistemas ordenados, escalables y trazables."</span>
+      <span data-pt>"Melhorar a qualidade de vida das pessoas e indústrias através de novas tecnologias, no equilíbrio entre modernidade, ecologia e economia circular — em sistemas ordenados, escaláveis e rastreáveis."</span>
     </div>
-    <div class="panel-section">
-      <span class="panel-tag"><span data-en>Our Vision</span><span data-es>Nuestra Visión</span><span data-pt>Nossa Visão</span></span>
-      <p class="panel-text">
-        <span data-en>"To become the trusted ecosystem partner of industrial civilization — governments, mining operators, energy companies and global institutions — deployed everywhere in the world."</span>
-        <span data-es>"Convertirnos en el socio ecosistémico de confianza de la civilización industrial — gobiernos, operadoras mineras, empresas de energía e instituciones globales — desplegados en todo el mundo."</span>
-        <span data-pt>"Tornar-nos o parceiro ecossistêmico de confiança da civilização industrial — governos, mineradoras, empresas de energia e instituições globais — implantados em todo o mundo."</span>
-      </p>
+    <div class="panel-lbl"><span data-en>Our Vision</span><span data-es>Nuestra Visión</span><span data-pt>Nossa Visão</span></div>
+    <div class="panel-text">
+      <span data-en>"To become the trusted ecosystem partner of industrial civilization — governments, mining operators, energy companies and global institutions — everywhere in the world."</span>
+      <span data-es>"Convertirnos en el socio ecosistémico de confianza de la civilización industrial — gobiernos, operadoras mineras, empresas de energía e instituciones globales — en todo el mundo."</span>
+      <span data-pt>"Tornar-nos o parceiro ecossistêmico de confiança da civilização industrial — governos, mineradoras, empresas de energia e instituições globais — em todo o mundo."</span>
     </div>
-    <span class="panel-tag"><span data-en>How We Work</span><span data-es>Cómo Trabajamos</span><span data-pt>Como Trabalhamos</span></span>
+    <div class="panel-lbl"><span data-en>How We Work</span><span data-es>Cómo Trabajamos</span><span data-pt>Como Trabalhamos</span></div>
     <div class="pillars">
       <div class="pillar">
         <div class="pillar-name">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="0.5" fill="rgba(255,255,255,0.55)"/><rect x="7" y="1" width="4" height="4" rx="0.5" fill="rgba(255,255,255,0.55)"/><rect x="1" y="7" width="4" height="4" rx="0.5" fill="rgba(255,255,255,0.55)"/><rect x="7" y="7" width="4" height="4" rx="0.5" fill="rgba(255,255,255,0.55)"/></svg>
-          <span data-en>Ecosystem Design</span><span data-es>Diseño de Ecosistemas</span><span data-pt>Design de Ecossistemas</span>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="4" height="4" rx="0.5" fill="rgba(255,255,255,0.6)"/><rect x="8" y="1" width="4" height="4" rx="0.5" fill="rgba(255,255,255,0.6)"/><rect x="1" y="8" width="4" height="4" rx="0.5" fill="rgba(255,255,255,0.6)"/><rect x="8" y="8" width="4" height="4" rx="0.5" fill="rgba(255,255,255,0.6)"/></svg>
+          <span data-en>Ecosystem Design</span><span data-es>Diseño de Ecosistemas</span><span data-pt>Design de Ecossistema</span>
         </div>
         <div class="pillar-desc"><span data-en>End-to-end architecture</span><span data-es>Arquitectura integral</span><span data-pt>Arquitetura completa</span></div>
       </div>
       <div class="pillar">
         <div class="pillar-name">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4.5" stroke="rgba(255,255,255,0.55)" stroke-width="1"/><path d="M4 6 L5.5 7.5 L8.5 4" stroke="rgba(255,255,255,0.55)" stroke-width="1"/></svg>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/><path d="M4 6.5 L6 8.5 L9.5 4.5" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/></svg>
           <span data-en>AI Governance</span><span data-es>Gobernanza IA</span><span data-pt>Governança IA</span>
         </div>
         <div class="pillar-desc"><span data-en>Traceable & auditable</span><span data-es>Trazable y auditable</span><span data-pt>Rastreável e auditável</span></div>
       </div>
       <div class="pillar">
         <div class="pillar-name">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 9 L3.5 4 L6 6.5 L9 2 L11 4.5" stroke="rgba(255,255,255,0.55)" stroke-width="1" fill="none"/></svg>
-          <span data-en>Global Scale</span><span data-es>Escala Global</span><span data-pt>Escala Global</span>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 10 L4 4 L7 7 L10 2 L12 5" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" fill="none"/></svg>
+          <span data-en>Global Scalability</span><span data-es>Escalabilidad Global</span><span data-pt>Escalabilidade Global</span>
         </div>
         <div class="pillar-desc"><span data-en>Pilot to industrial</span><span data-es>Piloto a industrial</span><span data-pt>Piloto a industrial</span></div>
       </div>
       <div class="pillar">
         <div class="pillar-name">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10 L6 2 L10 10 Z" stroke="rgba(255,255,255,0.55)" stroke-width="1" fill="none"/><line x1="6" y1="5" x2="6" y2="7.5" stroke="rgba(255,255,255,0.55)" stroke-width="1"/></svg>
-          <span data-en>Global Challenges</span><span data-es>Desafíos Globales</span><span data-pt>Desafios Globais</span>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 11 L6.5 2 L11 11 Z" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" fill="none"/><line x1="6.5" y1="5" x2="6.5" y2="8" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/></svg>
+          <span data-en>Challenge Response</span><span data-es>Respuesta a Desafíos</span><span data-pt>Resposta a Desafios</span>
         </div>
-        <div class="pillar-desc">Industrial · Social · Gov</div>
+        <div class="pillar-desc"><span data-en>Industrial · Social · Gov</span><span data-es>Industrial · Social · Gov</span><span data-pt>Industrial · Social · Gov</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══ SERVICES ══ -->
+<!-- SERVICES -->
 <section id="services">
-  <div class="sec-head">
-    <div class="sec-ey"><span data-en>What We Do</span><span data-es>Qué Hacemos</span><span data-pt>O Que Fazemos</span></div>
-    <div class="sec-title"><span data-en>Services</span><span data-es>Servicios</span><span data-pt>Serviços</span></div>
+  <div class="sec-hdr">
+    <div>
+      <div class="sec-ey"><span data-en>What We Do</span><span data-es>Qué Hacemos</span><span data-pt>O Que Fazemos</span></div>
+      <div class="sec-title"><span data-en>Services</span><span data-es>Servicios</span><span data-pt>Serviços</span></div>
+    </div>
   </div>
   <div class="srv-grid">
     <div class="srv-item">
       <div class="srv-num">01</div>
       <div class="srv-name"><span data-en>Industrial Ecosystem Development</span><span data-es>Desarrollo de Ecosistemas Industriales</span><span data-pt>Desenvolvimento de Ecossistemas Industriais</span></div>
-      <p class="srv-desc"><span data-en>Full-stack design and deployment of integrated technological ecosystems for high-complexity industrial environments — hardware, software, AI and data fully connected.</span><span data-es>Diseño e implementación integral de ecosistemas tecnológicos para entornos industriales de alta complejidad — hardware, software, IA y datos completamente conectados.</span><span data-pt>Design e implementação completa de ecossistemas tecnológicos para ambientes industriais de alta complexidade — hardware, software, IA e dados totalmente conectados.</span></p>
+      <div class="srv-desc"><span data-en>Full-stack design and deployment of integrated technological ecosystems for high-complexity industrial environments — hardware, software, AI and data fully connected.</span><span data-es>Diseño e implementación de ecosistemas tecnológicos integrados para entornos industriales de alta complejidad — hardware, software, IA y datos completamente conectados.</span><span data-pt>Design e implementação de ecossistemas tecnológicos integrados para ambientes industriais de alta complexidade — hardware, software, IA e dados totalmente conectados.</span></div>
     </div>
     <div class="srv-item">
       <div class="srv-num">02</div>
       <div class="srv-name"><span data-en>AI Platform Engineering</span><span data-es>Ingeniería de Plataformas IA</span><span data-pt>Engenharia de Plataformas IA</span></div>
-      <p class="srv-desc"><span data-en>Development of AI-governed operational platforms under the AIHumanity framework — fully traceable, auditable and scalable from pilot to industrial deployment.</span><span data-es>Desarrollo de plataformas operacionales gobernadas por IA bajo el framework AIHumanity — completamente trazables, auditables y escalables del piloto al despliegue industrial.</span><span data-pt>Desenvolvimento de plataformas operacionais governadas por IA sob o framework AIHumanity — totalmente rastreáveis, auditáveis e escaláveis do piloto à implantação industrial.</span></p>
+      <div class="srv-desc"><span data-en>Development of AI-governed operational platforms under the AIHumanity framework — fully traceable, auditable and scalable from pilot to industrial deployment.</span><span data-es>Desarrollo de plataformas operacionales gobernadas por IA bajo el framework AIHumanity — completamente trazables, auditables y escalables del piloto al despliegue industrial.</span><span data-pt>Desenvolvimento de plataformas operacionais governadas por IA sob o framework AIHumanity — totalmente rastreáveis, auditáveis e escaláveis do piloto à implantação industrial.</span></div>
     </div>
     <div class="srv-item">
       <div class="srv-num">03</div>
       <div class="srv-name"><span data-en>HSE Intelligence Systems</span><span data-es>Sistemas de Inteligencia HSE</span><span data-pt>Sistemas de Inteligência HSE</span></div>
-      <p class="srv-desc"><span data-en>Real-time health, safety and environment platforms for critical operations — worker traceability, risk governance, incident prevention and full operational audit trail.</span><span data-es>Plataformas HSE en tiempo real para operaciones críticas — trazabilidad de trabajadores, gobernanza de riesgo, prevención de incidentes y auditoría operacional completa.</span><span data-pt>Plataformas de saúde, segurança e meio ambiente em tempo real para operações críticas — rastreabilidade de trabalhadores, governança de riscos e auditoria operacional completa.</span></p>
+      <div class="srv-desc"><span data-en>Real-time health, safety and environment platforms for critical operations — worker traceability, risk governance, incident prevention and full operational audit trail.</span><span data-es>Plataformas de salud, seguridad y medioambiente en tiempo real para operaciones críticas — trazabilidad de trabajadores, gobernanza de riesgo, prevención de incidentes y auditoría operacional completa.</span><span data-pt>Plataformas de saúde, segurança e meio ambiente em tempo real para operações críticas — rastreabilidade de trabalhadores, governança de riscos, prevenção de incidentes e auditoria operacional completa.</span></div>
     </div>
     <div class="srv-item">
       <div class="srv-num">04</div>
       <div class="srv-name"><span data-en>Environmental Control Systems</span><span data-es>Sistemas de Control Ambiental</span><span data-pt>Sistemas de Controle Ambiental</span></div>
-      <p class="srv-desc"><span data-en>Autonomous environmental monitoring and mitigation — particulate matter control, intelligent field asset orchestration and real-time data-driven regulatory compliance.</span><span data-es>Monitoreo y mitigación ambiental autónoma — control de material particulado, orquestación inteligente de activos en campo y cumplimiento normativo basado en datos en tiempo real.</span><span data-pt>Monitoramento e mitigação ambiental autônoma — controle de material particulado, orquestração inteligente de ativos em campo e conformidade regulatória em tempo real.</span></p>
+      <div class="srv-desc"><span data-en>Autonomous environmental monitoring and mitigation systems — particulate matter control, intelligent orchestration of field assets and real-time data-driven compliance.</span><span data-es>Sistemas autónomos de monitoreo y mitigación ambiental — control de material particulado, orquestación inteligente de activos en campo y cumplimiento normativo basado en datos en tiempo real.</span><span data-pt>Sistemas autônomos de monitoramento e mitigação ambiental — controle de material particulado, orquestração inteligente de ativos em campo e conformidade regulatória em tempo real.</span></div>
     </div>
     <div class="srv-item">
       <div class="srv-num">05</div>
       <div class="srv-name"><span data-en>Mineral Intelligence</span><span data-es>Inteligencia Mineral</span><span data-pt>Inteligência Mineral</span></div>
-      <p class="srv-desc"><span data-en>Unified mineral intelligence architecture integrating geological, geophysical and geochemical data — enabling faster, coherent and lower-uncertainty decisions in critical mineral exploration.</span><span data-es>Arquitectura de inteligencia mineral unificada integrando datos geológicos, geofísicos y geoquímicos — decisiones más rápidas y coherentes en exploración de minerales críticos.</span><span data-pt>Arquitetura de inteligência mineral unificada integrando dados geológicos, geofísicos e geoquímicos — decisões mais rápidas e coerentes em exploração de minerais críticos.</span></p>
+      <div class="srv-desc"><span data-en>Unified mineral intelligence architecture integrating geological, geophysical and geochemical data — enabling faster, more coherent and lower-uncertainty decisions in critical mineral exploration.</span><span data-es>Arquitectura de inteligencia mineral unificada que integra datos geológicos, geofísicos y geoquímicos — permitiendo decisiones más rápidas, coherentes y con menor incertidumbre en exploración de minerales críticos.</span><span data-pt>Arquitetura de inteligência mineral unificada integrando dados geológicos, geofísicos e geoquímicos — permitindo decisões mais rápidas, coerentes e com menor incerteza na exploração de minerais críticos.</span></div>
     </div>
     <div class="srv-item">
       <div class="srv-num">06</div>
       <div class="srv-name"><span data-en>Workforce Validation Systems</span><span data-es>Sistemas de Validación de Personal</span><span data-pt>Sistemas de Validação de Pessoal</span></div>
-      <p class="srv-desc"><span data-en>Digital pre-shift clearance, induction validation, human condition assessment and auditable access authorization — every worker interaction becomes structured, traceable risk data.</span><span data-es>Autorización digital pre-turno, validación de inducción, evaluación de condición humana y autorización de acceso auditable — cada interacción del trabajador se convierte en datos de riesgo trazables.</span><span data-pt>Autorização digital pré-turno, validação de indução, avaliação de condição humana e autorização de acesso auditável — cada interação do trabalhador se torna dados de risco rastreáveis.</span></p>
+      <div class="srv-desc"><span data-en>Digital pre-shift clearance, induction validation, human condition assessment and auditable access authorization — transforming every worker interaction into structured, traceable risk data.</span><span data-es>Autorización digital pre-turno, validación de inducción, evaluación de condición humana y autorización de acceso auditable — transformando cada interacción del trabajador en datos de riesgo estructurados y trazables.</span><span data-pt>Autorização digital pré-turno, validação de indução, avaliação de condição humana e autorização de acesso auditável — transformando cada interação do trabalhador em dados de risco estruturados e rastreáveis.</span></div>
     </div>
     <div class="srv-item">
       <div class="srv-num">07</div>
       <div class="srv-name"><span data-en>Modular Sustainable Construction</span><span data-es>Construcción Modular Sostenible</span><span data-pt>Construção Modular Sustentável</span></div>
-      <p class="srv-desc"><span data-en>Award-winning modular construction ecosystems using recycled materials — 45% cost reduction vs traditional methods, fire-resistant, no cement, minimal carbon footprint. EU · COP25 · CEPAL validated.</span><span data-es>Ecosistemas de construcción modular con materiales reciclados — 45% de reducción de costos vs métodos tradicionales, ignífugos, sin cemento, mínima huella de carbono. Validado EU · COP25 · CEPAL.</span><span data-pt>Ecossistemas de construção modular com materiais reciclados — 45% de redução de custos vs métodos tradicionais, resistentes ao fogo, sem cimento, mínima pegada de carbono. Validado EU · COP25 · CEPAL.</span></p>
+      <div class="srv-desc"><span data-en>Award-winning modular construction ecosystems using recycled materials — fast deployment, 45% cost reduction vs traditional methods, zero toxic content and minimal carbon footprint.</span><span data-es>Ecosistemas de construcción modular con materiales reciclados, reconocidos internacionalmente — despliegue rápido, 45% de reducción de costos vs métodos tradicionales, sin contenido tóxico y mínima huella de carbono.</span><span data-pt>Ecossistemas de construção modular com materiais reciclados, premiados internacionalmente — implantação rápida, 45% de redução de custos vs métodos tradicionais, sem conteúdo tóxico e mínima pegada de carbono.</span></div>
     </div>
     <div class="srv-item">
       <div class="srv-num">08</div>
       <div class="srv-name"><span data-en>Strategic Co-Development</span><span data-es>Codesarrollo Estratégico</span><span data-pt>Codesenvolvimento Estratégico</span></div>
-      <p class="srv-desc"><span data-en>Joint development with industry operators, governments and global integrators — from diagnostic and architecture to full industrialization, with complete IP and governance structure.</span><span data-es>Desarrollo conjunto con operadores industriales, gobiernos e integradores globales — desde diagnóstico y arquitectura hasta la industrialización completa, con estructura completa de IP y gobernanza.</span><span data-pt>Desenvolvimento conjunto com operadores industriais, governos e integradores globais — do diagnóstico e arquitetura à industrialização completa, com estrutura completa de IP e governança.</span></p>
+      <div class="srv-desc"><span data-en>Joint development with industry operators, governments and global technology integrators — from diagnostic and architecture to industrialization, with full IP and governance structure.</span><span data-es>Desarrollo conjunto con operadores industriales, gobiernos e integradores tecnológicos globales — desde el diagnóstico y arquitectura hasta la industrialización, con estructura completa de IP y gobernanza.</span><span data-pt>Desenvolvimento conjunto com operadores industriais, governos e integradores tecnológicos globais — desde o diagnóstico e arquitetura até a industrialização, com estrutura completa de IP e governança.</span></div>
     </div>
     <div class="srv-item">
       <div class="srv-num">09</div>
       <div class="srv-name"><span data-en>Global Challenge Participation</span><span data-es>Participación en Desafíos Globales</span><span data-pt>Participação em Desafios Globais</span></div>
-      <p class="srv-desc"><span data-en>Active participation in international industrial, social and governmental challenges — designing ordered, structured and fully deployable solutions for complex real-world problems at any scale.</span><span data-es>Participación activa en desafíos industriales, sociales y gubernamentales internacionales — diseñando soluciones ordenadas, estructuradas y completamente desplegables para problemas complejos del mundo real.</span><span data-pt>Participação ativa em desafios industriais, sociais e governamentais internacionais — projetando soluções ordenadas, estruturadas e totalmente implantáveis para problemas complexos do mundo real.</span></p>
+      <div class="srv-desc"><span data-en>Active participation in international industrial, social and governmental challenges — designing ordered, structured and fully deployable solutions for complex real-world problems.</span><span data-es>Participación activa en desafíos industriales, sociales y gubernamentales internacionales — diseñando soluciones ordenadas, estructuradas y completamente desplegables para problemas complejos del mundo real.</span><span data-pt>Participação ativa em desafios industriais, sociais e governamentais internacionais — projetando soluções ordenadas, estruturadas e totalmente implantáveis para problemas complexos do mundo real.</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══ INDUSTRIES ══ -->
-<section id="industries" style="background:var(--navy);border-color:var(--border-lt);padding:clamp(52px,7vw,80px) clamp(20px,4vw,48px)">
-  <div class="sec-head">
-    <div class="sec-ey" style="color:var(--cyan)"><span data-en>Sectors We Serve</span><span data-es>Sectores que Servimos</span><span data-pt>Setores que Atendemos</span></div>
-    <div class="sec-title" style="color:#fff"><span data-en>Industries</span><span data-es>Industrias</span><span data-pt>Indústrias</span></div>
-  </div>
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="sec-ey"><span data-en>Sectors We Serve</span><span data-es>Sectores que Servimos</span><span data-pt>Setores que Atendemos</span></div>
+  <div class="sec-title"><span data-en>Industries</span><span data-es>Industrias</span><span data-pt>Indústrias</span></div>
   <div class="ind-grid">
     <a class="ind-card" href="#contact">
-      <div class="ind-bar"></div>
-      <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop" alt="AIDeepMiner Mining Operations Network">
+      <div class="ind-top-bar"></div>
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Mining operations">
       <div class="ind-overlay">
         <div class="ind-name"><span data-en>Mining</span><span data-es>Minería</span><span data-pt>Mineração</span></div>
-        <div class="ind-tags">AIDeepMiner · ADMS · UMI · AISchool™</div>
+        <div class="ind-prod">AIDeepMiner · ADMS · UMI · AISchool™</div>
       </div>
     </a>
     <a class="ind-card" href="#contact">
-      <div class="ind-bar"></div>
-      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80&auto=format&fit=crop" alt="Oil and gas refinery">
+      <div class="ind-top-bar"></div>
+      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80" alt="Energy infrastructure">
       <div class="ind-overlay">
         <div class="ind-name"><span data-en>Energy</span><span data-es>Energía</span><span data-pt>Energia</span></div>
-        <div class="ind-tags">Oil · Gas · Renewable · HSE Platforms</div>
+        <div class="ind-prod">Oil · Gas · Renewable · HSE Platforms</div>
       </div>
     </a>
     <a class="ind-card" href="#contact">
-      <div class="ind-bar"></div>
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&auto=format&fit=crop" alt="Infrastructure construction">
+      <div class="ind-top-bar"></div>
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Infrastructure">
       <div class="ind-overlay">
         <div class="ind-name"><span data-en>Infrastructure</span><span data-es>Infraestructura</span><span data-pt>Infraestrutura</span></div>
-        <div class="ind-tags">UniBlockSystem™ · Utilities · Barriers</div>
+        <div class="ind-prod">UniBlockSystem™ · Utilities · Modular</div>
       </div>
     </a>
     <a class="ind-card" href="#contact">
-      <div class="ind-bar"></div>
-      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&q=80&auto=format&fit=crop" alt="Government and institutions">
+      <div class="ind-top-bar"></div>
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&q=80" alt="Government">
       <div class="ind-overlay">
         <div class="ind-name"><span data-en>Government</span><span data-es>Gobierno</span><span data-pt>Governo</span></div>
-        <div class="ind-tags"><span data-en>Strategic Dev · Public Policy</span><span data-es>Desarrollo Estratégico · Política Pública</span><span data-pt>Desenvolvimento Estratégico</span></div>
+        <div class="ind-prod"><span data-en>Strategic Development · Public Policy</span><span data-es>Desarrollo Estratégico · Política Pública</span><span data-pt>Desenvolvimento Estratégico</span></div>
       </div>
     </a>
     <a class="ind-card" href="#contact">
-      <div class="ind-bar"></div>
-      <img src="https://images.unsplash.com/photo-1587906697341-bfbde76785c7?w=600&q=80&auto=format&fit=crop" alt="Emergency response">
+      <div class="ind-top-bar"></div>
+      <img src="https://images.unsplash.com/photo-1587906697341-bfbde76785c7?w=600&q=80" alt="Emergency Response">
       <div class="ind-overlay">
-        <div class="ind-name"><span data-en>Emergency Response</span><span data-es>Emergencias</span><span data-pt>Emergências</span></div>
-        <div class="ind-tags"><span data-en>Disaster · Humanitarian</span><span data-es>Desastre · Humanitario</span><span data-pt>Desastre · Humanitário</span></div>
+        <div class="ind-name"><span data-en>Emergency Response</span><span data-es>Respuesta a Emergencias</span><span data-pt>Resposta a Emergências</span></div>
+        <div class="ind-prod"><span data-en>Disaster · Humanitarian · Crisis</span><span data-es>Desastre · Humanitario · Crisis</span><span data-pt>Desastre · Humanitário · Crise</span></div>
       </div>
     </a>
     <a class="ind-card" href="#contact">
-      <div class="ind-bar"></div>
-      <img src="https://images.unsplash.com/photo-1555069519-127aadecd204?w=600&q=80&auto=format&fit=crop" alt="Social development housing">
+      <div class="ind-top-bar"></div>
+      <img src="https://images.unsplash.com/photo-1555069519-127aadecd204?w=600&q=80" alt="Social Development">
       <div class="ind-overlay">
         <div class="ind-name"><span data-en>Social Development</span><span data-es>Desarrollo Social</span><span data-pt>Desenvolvimento Social</span></div>
-        <div class="ind-tags"><span data-en>Housing · Education · Health</span><span data-es>Vivienda · Educación · Salud</span><span data-pt>Habitação · Educação · Saúde</span></div>
+        <div class="ind-prod"><span data-en>Housing · Education · Healthcare</span><span data-es>Vivienda · Educación · Salud</span><span data-pt>Habitação · Educação · Saúde</span></div>
       </div>
     </a>
     <a class="ind-card" href="#contact">
-      <div class="ind-bar"></div>
-      <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=600&q=80&auto=format&fit=crop" alt="Aerospace and field operations">
+      <div class="ind-top-bar"></div>
+      <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=600&q=80" alt="Aerospace">
       <div class="ind-overlay">
         <div class="ind-name"><span data-en>Aerospace</span><span data-es>Aeroespacial</span><span data-pt>Aeroespacial</span></div>
-        <div class="ind-tags"><span data-en>Field Systems · Structural</span><span data-es>Sistemas de Campo · Estructural</span><span data-pt>Sistemas de Campo · Estrutural</span></div>
+        <div class="ind-prod"><span data-en>Field Systems · Structural Solutions</span><span data-es>Sistemas de Campo · Soluciones Estructurales</span><span data-pt>Sistemas de Campo · Soluções Estruturais</span></div>
       </div>
     </a>
     <a class="ind-card" href="#contact">
-      <div class="ind-bar"></div>
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&auto=format&fit=crop" alt="Innovation research and development">
+      <div class="ind-top-bar"></div>
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Innovation and R&D">
       <div class="ind-overlay">
         <div class="ind-name"><span data-en>Innovation & R&D</span><span data-es>Innovación e I+D</span><span data-pt>Inovação e P&D</span></div>
-        <div class="ind-tags"><span data-en>Global Challenges · Co-Dev</span><span data-es>Desafíos Globales · Codesarrollo</span><span data-pt>Desafios Globais · Codesenvolvimento</span></div>
+        <div class="ind-prod"><span data-en>Global Challenges · Co-Development</span><span data-es>Desafíos Globales · Codesarrollo</span><span data-pt>Desafios Globais · Codesenvolvimento</span></div>
       </div>
     </a>
   </div>
 </section>
 
-<!-- ══ PRODUCT VISUAL — Real image ══ -->
-<div class="product-visual">
-  <div class="pv-left">
-    <div class="pv-tag"><span data-en>Featured — AIDeepMiner™</span><span data-es>Destacado — AIDeepMiner™</span><span data-pt>Destaque — AIDeepMiner™</span></div>
-    <div class="pv-title"><span data-en>Intelligent Safety<br>Node for Mining</span><span data-es>Nodo Inteligente<br>de Seguridad Minera</span><span data-pt>Nó Inteligente<br>de Segurança Mineira</span></div>
-    <p class="pv-desc"><span data-en>The AIDeepMiner smart helmet is an edge computing node that captures, processes and transmits real-time HSE data from every worker — underground and open-pit. Governed by the AIHumanity platform.</span><span data-es>El casco inteligente AIDeepMiner es un nodo de computación edge que captura, procesa y transmite datos HSE en tiempo real de cada trabajador — subterráneo y rajo abierto. Gobernado por la plataforma AIHumanity.</span><span data-pt>O capacete inteligente AIDeepMiner é um nó de computação edge que captura, processa e transmite dados HSE em tempo real de cada trabalhador — subterrâneo e mina a céu aberto. Governado pela plataforma AIHumanity.</span></p>
-    <a href="/ecosystem/aideepminer" class="pv-link">
-      <span data-en>View Technical Datasheet</span><span data-es>Ver Ficha Técnica</span><span data-pt>Ver Ficha Técnica</span>
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7 H12 M8 3 L12 7 L8 11" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
-    </a>
-  </div>
-  <div class="pv-right">
-    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop" alt="AIDeepMiner Smart Mining Helmet — Uniting Technology">
-  </div>
-</div>
-
-<!-- ══ ECOSYSTEM ══ -->
-<div id="ecosystem">
-  <div class="eco-hdr">
-    <div class="eco-hdr-left">
-      <div class="sec-ey" style="color:var(--cyan)"><span data-en>Powered by AIHumanity</span><span data-es>Impulsado por AIHumanity</span><span data-pt>Impulsado pelo AIHumanity</span></div>
-      <div class="sec-title" style="color:#fff"><span data-en>The UT Ecosystem</span><span data-es>El Ecosistema UT</span><span data-pt>O Ecossistema UT</span></div>
-      <p class="eco-hdr-sub"><span data-en>Six integrated product modules — each independently deployable, all governed by AIHumanity. Each module has its own dedicated technical space with documentation and datasheets.</span><span data-es>Seis módulos de productos integrados — cada uno desplegable independientemente, todos gobernados por AIHumanity. Cada módulo tiene su propio espacio técnico con documentación y fichas técnicas.</span><span data-pt>Seis módulos de produtos integrados — cada um implantável de forma independente, todos governados pelo AIHumanity. Cada módulo tem seu próprio espaço técnico com documentação e fichas técnicas.</span></p>
+<!-- ECOSYSTEM -->
+<section id="ecosystem" style="padding:64px 48px;background:#091629;border-bottom:0.5px solid rgba(255,255,255,0.06)">
+  <div class="eco-top">
+    <div>
+      <div class="eco-ey"><span data-en>Powered by AIHumanity</span><span data-es>Impulsado por AIHumanity</span><span data-pt>Impulsado por AIHumanity</span></div>
+      <div class="eco-h"><span data-en>The UT Ecosystem</span><span data-es>El Ecosistema UT</span><span data-pt>O Ecossistema UT</span></div>
+      <p class="eco-sub"><span data-en>Six integrated product modules — each independently deployable, all governed by AIHumanity. Each module has its own dedicated technical space.</span><span data-es>Seis módulos de productos integrados — cada uno desplegable independientemente, todos gobernados por AIHumanity. Cada módulo tiene su propio espacio técnico dedicado.</span><span data-pt>Seis módulos de produtos integrados — cada um implantável de forma independente, todos governados pelo AIHumanity. Cada módulo tem seu próprio espaço técnico dedicado.</span></p>
     </div>
-    <a href="/ecosystem" class="eco-btn">
-      <span data-en>Explore Full Ecosystem</span>
-      <span data-es>Explorar Ecosistema</span>
-      <span data-pt>Explorar Ecossistema</span>
-    </a>
+    <a href="/ecosystem" class="eco-cta"><span data-en>Explore Full Ecosystem</span><span data-es>Explorar Ecosistema Completo</span><span data-pt>Explorar Ecossistema Completo</span></a>
   </div>
   <div class="eco-grid">
     <a href="/ecosystem/aihumanity" class="eco-card core">
-      <div class="eco-mark" style="background:rgba(0,191,223,0.15)">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#00BFDF" stroke-width="1.5"/><circle cx="10" cy="10" r="3" fill="#00BFDF"/><line x1="10" y1="2" x2="10" y2="7" stroke="#00BFDF" stroke-width="1.2"/><line x1="10" y1="13" x2="10" y2="18" stroke="#00BFDF" stroke-width="1.2"/><line x1="2" y1="10" x2="7" y2="10" stroke="#00BFDF" stroke-width="1.2"/><line x1="13" y1="10" x2="18" y2="10" stroke="#00BFDF" stroke-width="1.2"/></svg>
+      <div class="eco-mark" style="background:rgba(0,196,240,0.15)">
+        <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#00C4F0" stroke-width="1.2"/><circle cx="9" cy="9" r="3" fill="#00C4F0"/><line x1="9" y1="2" x2="9" y2="6" stroke="#00C4F0" stroke-width="1"/><line x1="9" y1="12" x2="9" y2="16" stroke="#00C4F0" stroke-width="1"/><line x1="2" y1="9" x2="6" y2="9" stroke="#00C4F0" stroke-width="1"/><line x1="12" y1="9" x2="16" y2="9" stroke="#00C4F0" stroke-width="1"/></svg>
       </div>
-      <div class="eco-prod-name">AIHumanity™</div>
-      <div class="eco-prod-tag"><span data-en>Core Platform · Foundation</span><span data-es>Plataforma Central · Base</span><span data-pt>Plataforma Central · Base</span></div>
-      <div class="eco-badge">CORE</div>
+      <div class="eco-name">AIHumanity™</div>
+      <div class="eco-tag"><span data-en>Core Platform</span><span data-es>Plataforma Central</span><span data-pt>Plataforma Central</span></div>
+      <div class="eco-badge"><span data-en>Foundation</span><span data-es>Base</span><span data-pt>Base</span></div>
     </a>
     <a href="/ecosystem/aideepminer" class="eco-card">
-      <div class="eco-mark" style="background:rgba(255,255,255,0.05)">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="6" y="1" width="8" height="11" rx="2" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><path d="M6 9 L2 19 L10 16 L18 19 L14 9" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1"/></svg>
+      <div class="eco-mark" style="background:rgba(255,255,255,0.06)">
+        <svg viewBox="0 0 18 18" fill="none"><rect x="5" y="1" width="8" height="10" rx="2" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/><path d="M5 8 L2 17 L9 14 L16 17 L13 8" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"/></svg>
       </div>
-      <div class="eco-prod-name">AIDeepMiner™</div>
-      <div class="eco-prod-tag"><span data-en>Mining HSE</span><span data-es>HSE Minería</span><span data-pt>HSE Mineração</span></div>
+      <div class="eco-name">AIDeepMiner™</div>
+      <div class="eco-tag"><span data-en>Mining HSE</span><span data-es>HSE Minería</span><span data-pt>HSE Mineração</span></div>
     </a>
     <a href="/ecosystem/adms" class="eco-card">
-      <div class="eco-mark" style="background:rgba(255,255,255,0.05)">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="5.5" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><path d="M3 6 Q10 2 17 6" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/><path d="M2 10 Q10 6 18 10" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/></svg>
+      <div class="eco-mark" style="background:rgba(255,255,255,0.06)">
+        <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="5" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/><path d="M3 5 Q9 1 15 5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/><path d="M2 9 Q9 5 16 9" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/></svg>
       </div>
-      <div class="eco-prod-name">ADMS™</div>
-      <div class="eco-prod-tag"><span data-en>Dust Control</span><span data-es>Control de Polvo</span><span data-pt>Controle de Poeira</span></div>
+      <div class="eco-name">ADMS™</div>
+      <div class="eco-tag"><span data-en>Dust Control</span><span data-es>Control de Polvo</span><span data-pt>Controle de Poeira</span></div>
     </a>
     <a href="/ecosystem/aischool" class="eco-card">
-      <div class="eco-mark" style="background:rgba(255,255,255,0.05)">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="12" rx="1.5" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><path d="M7 5 L7 3 L13 3 L13 5" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><line x1="5" y1="10" x2="15" y2="10" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><line x1="5" y1="13" x2="11" y2="13" stroke="rgba(255,255,255,0.3)" stroke-width="1"/></svg>
+      <div class="eco-mark" style="background:rgba(255,255,255,0.06)">
+        <svg viewBox="0 0 18 18" fill="none"><rect x="2" y="5" width="14" height="10" rx="1.5" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/><path d="M6 5 L6 3 L12 3 L12 5" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"/><line x1="5" y1="9" x2="13" y2="9" stroke="rgba(255,255,255,0.4)" stroke-width="1"/><line x1="5" y1="11.5" x2="10" y2="11.5" stroke="rgba(255,255,255,0.4)" stroke-width="1"/></svg>
       </div>
-      <div class="eco-prod-name">AISchool™</div>
-      <div class="eco-prod-tag"><span data-en>Workforce Validation</span><span data-es>Validación Personal</span><span data-pt>Validação de Pessoal</span></div>
+      <div class="eco-name">AISchool™</div>
+      <div class="eco-tag"><span data-en>Workforce Validation</span><span data-es>Validación de Personal</span><span data-pt>Validação de Pessoal</span></div>
     </a>
     <a href="/ecosystem/umi" class="eco-card">
-      <div class="eco-mark" style="background:rgba(255,255,255,0.05)">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 16 L7 9 L11 13 L15 5 L18 8" stroke="rgba(255,255,255,0.55)" stroke-width="1.2" fill="none"/><circle cx="7" cy="9" r="1.5" fill="rgba(255,255,255,0.35)"/><circle cx="15" cy="5" r="1.5" fill="rgba(255,255,255,0.35)"/></svg>
+      <div class="eco-mark" style="background:rgba(255,255,255,0.06)">
+        <svg viewBox="0 0 18 18" fill="none"><path d="M2 14 L6 8 L10 11 L14 4 L16 7" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" fill="none"/><circle cx="6" cy="8" r="1.5" fill="rgba(255,255,255,0.4)"/><circle cx="14" cy="4" r="1.5" fill="rgba(255,255,255,0.4)"/></svg>
       </div>
-      <div class="eco-prod-name">UMI™</div>
-      <div class="eco-prod-tag"><span data-en>Mineral Intelligence</span><span data-es>Inteligencia Mineral</span><span data-pt>Inteligência Mineral</span></div>
+      <div class="eco-name">UMI™</div>
+      <div class="eco-tag"><span data-en>Mineral Intelligence</span><span data-es>Inteligencia Mineral</span><span data-pt>Inteligência Mineral</span></div>
     </a>
     <a href="/ecosystem/uniblocksystem" class="eco-card">
-      <div class="eco-mark" style="background:rgba(255,255,255,0.05)">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="9" width="8" height="8" rx="1" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><rect x="11" y="9" width="8" height="8" rx="1" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><rect x="6" y="2" width="8" height="8" rx="1" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/></svg>
+      <div class="eco-mark" style="background:rgba(255,255,255,0.06)">
+        <svg viewBox="0 0 18 18" fill="none"><rect x="1" y="7" width="7" height="7" rx="1" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/><rect x="10" y="7" width="7" height="7" rx="1" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/><rect x="5" y="1" width="8" height="7" rx="1" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/></svg>
       </div>
-      <div class="eco-prod-name">UniBlockSystem™</div>
-      <div class="eco-prod-tag"><span data-en>Sustainable Construction</span><span data-es>Construcción Sostenible</span><span data-pt>Construção Sustentável</span></div>
+      <div class="eco-name">UniBlockSystem™</div>
+      <div class="eco-tag"><span data-en>Sustainable Construction</span><span data-es>Construcción Sostenible</span><span data-pt>Construção Sustentável</span></div>
     </a>
   </div>
-</div>
+</section>
 
-<!-- Logos strip -->
-<div class="logos-strip">
+<!-- PRODUCT LOGOS BAR -->
+<div class="logos-bar">
   <span class="logos-lbl"><span data-en>Registered Products</span><span data-es>Productos Registrados</span><span data-pt>Produtos Registrados</span></span>
   <div class="logos-vdiv"></div>
-  <div class="prod-tag"><div class="prod-tag-dot" style="background:#00BFDF"></div>AIHumanity<sup>™</sup></div>
-  <div class="prod-tag"><div class="prod-tag-dot" style="background:#1A3A5C"></div>AIDeepMiner<sup>™</sup></div>
-  <div class="prod-tag"><div class="prod-tag-dot" style="background:#1A3A5C"></div>ADMS<sup>™</sup></div>
-  <div class="prod-tag"><div class="prod-tag-dot" style="background:#1A3A5C"></div>AISchool<sup>™</sup></div>
-  <div class="prod-tag"><div class="prod-tag-dot" style="background:#1A3A5C"></div>UMI<sup>™</sup></div>
-  <div class="prod-tag"><div class="prod-tag-dot" style="background:#2A5C3A"></div>UniBlockSystem<sup>™</sup></div>
+  <div class="prod-lg"><div class="prod-lg-dot" style="background:#00C4F0"></div><span class="prod-lg-name">AIHumanity<sup>™</sup></span></div>
+  <div class="prod-lg"><div class="prod-lg-dot" style="background:#1A3A5C"></div><span class="prod-lg-name">AIDeepMiner<sup>™</sup></span></div>
+  <div class="prod-lg"><div class="prod-lg-dot" style="background:#1A3A5C"></div><span class="prod-lg-name">ADMS<sup>™</sup></span></div>
+  <div class="prod-lg"><div class="prod-lg-dot" style="background:#1A3A5C"></div><span class="prod-lg-name">AISchool<sup>™</sup></span></div>
+  <div class="prod-lg"><div class="prod-lg-dot" style="background:#1A3A5C"></div><span class="prod-lg-name">UMI<sup>™</sup></span></div>
+  <div class="prod-lg"><div class="prod-lg-dot" style="background:#2A6040"></div><span class="prod-lg-name">UniBlockSystem<sup>™</sup></span></div>
 </div>
 
-<!-- ══ PRESS ══ -->
+<!-- PRESS -->
 <section id="press">
-  <div class="sec-head">
-    <div class="sec-row">
-      <div>
-        <div class="sec-ey"><span data-en>Media & Coverage</span><span data-es>Medios y Cobertura</span><span data-pt>Mídia e Cobertura</span></div>
-        <div class="sec-title"><span data-en>Press Room</span><span data-es>Sala de Prensa</span><span data-pt>Sala de Imprensa</span></div>
-      </div>
+  <div class="sec-hdr">
+    <div>
+      <div class="sec-ey"><span data-en>Media & Press</span><span data-es>Medios y Prensa</span><span data-pt>Mídia e Imprensa</span></div>
+      <div class="sec-title"><span data-en>Press Room</span><span data-es>Sala de Prensa</span><span data-pt>Sala de Imprensa</span></div>
     </div>
+    <a href="#press" class="sec-link"><span data-en>All Coverage</span><span data-es>Toda la Cobertura</span><span data-pt>Toda a Cobertura</span></a>
   </div>
   <div class="press-grid">
-    <div class="press-card">
-      <img class="press-img tall" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop" alt="Uniting Technology Global Operations">
+    <div class="press-card featured">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="UniBlockSystem sustainable construction">
       <div class="press-body">
-        <div class="press-src"><div class="press-src-dot"></div><span data-en>EFE News Agency · La República EC · 15 January 2020</span><span data-es>Agencia EFE · La República EC · 15 enero 2020</span><span data-pt>Agência EFE · La República EC · 15 janeiro 2020</span></div>
-        <div class="press-title"><span data-en>Recycled plastic and wood enable the construction of sustainable buildings</span><span data-es>El reciclaje de plástico y madera permite la construcción de edificios sostenibles</span><span data-pt>Reciclagem de plástico e madeira permite a construção de edifícios sustentáveis</span></div>
-        <p class="press-excerpt"><span data-en>UniBlockSystem, created by Uniting People International (UPI), achieves 45% cost savings versus traditional construction. Blocks are manufactured from 30% recycled plastic and 70% recycled wood — fire-resistant, non-toxic, requiring no cement or adhesive. Projects include Chile's first tourism office and a scientific shelter for the Chilean Antarctic Institute.</span><span data-es>UniBlockSystem, creado por Uniting People International (UPI), logra un ahorro del 45% frente a la construcción tradicional. Los bloques se fabrican con 30% plástico reciclado y 70% madera reciclada — ignífugos, sin tóxicos y sin necesidad de cemento ni adhesivo. Los proyectos incluyen la primera oficina de turismo de Chile y un refugio para el Instituto Antártico Chileno.</span><span data-pt>UniBlockSystem, criado pela Uniting People International (UPI), alcança 45% de economia em relação à construção tradicional. Os blocos são fabricados com 30% plástico reciclado e 70% madeira reciclada — resistentes ao fogo, não tóxicos e sem necessidade de cimento ou adesivo.</span></p>
-        <a href="https://www.larepublica.ec/blog/2020/01/15/reciclaje-de-plastico-y-madera-permite-construccion-de-edificios-sostenibles/" target="_blank" rel="noopener" class="press-link">
-          <span data-en>Read full article on La República EC →</span><span data-es>Leer artículo completo en La República EC →</span><span data-pt>Ler artigo completo na La República EC →</span>
-        </a>
+        <div class="press-src"><div class="press-src-dot"></div><span data-en>EFE News Agency · La República EC · January 2020</span><span data-es>Agencia EFE · La República EC · Enero 2020</span><span data-pt>Agência EFE · La República EC · Janeiro 2020</span></div>
+        <div class="press-title"><span data-en>Recycled plastic and wood enable sustainable building construction</span><span data-es>El reciclaje de plástico y madera permite la construcción de edificios sostenibles</span><span data-pt>Reciclagem de plástico e madeira permite construção de edifícios sustentáveis</span></div>
+        <p class="press-excerpt"><span data-en>UniBlockSystem, created by Uniting People International (UPI), achieves 45% cost savings versus traditional construction. Blocks manufactured from 30% recycled plastic and 70% recycled wood — fire-resistant, non-toxic, and requiring no adhesive or cement.</span><span data-es>UniBlockSystem, creado por Uniting People International (UPI), logra un ahorro del 45% frente a la construcción tradicional. Bloques fabricados con 30% plástico reciclado y 70% madera reciclada — ignífugos, sin tóxicos y sin necesidad de cemento ni adhesivo.</span><span data-pt>UniBlockSystem, criado pela Uniting People International (UPI), alcança 45% de economia versus construção tradicional. Blocos fabricados com 30% plástico reciclado e 70% madeira reciclada — resistentes ao fogo, não tóxicos e sem necessidade de adesivo ou cimento.</span></p>
+        <a href="https://www.larepublica.ec/blog/2020/01/15/reciclaje-de-plastico-y-madera-permite-construccion-de-edificios-sostenibles/" target="_blank" rel="noopener" class="press-link"><span data-en>Read full article →</span><span data-es>Leer artículo completo →</span><span data-pt>Ler artigo completo →</span></a>
       </div>
     </div>
     <div class="press-card">
-      <img class="press-img short" src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=500&q=80&auto=format&fit=crop" alt="COP25 Madrid United Nations climate summit">
+      <img src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?w=400&q=80" alt="COP25 Madrid">
       <div class="press-body">
-        <div class="press-src"><div class="press-src-dot"></div>United Nations · COP25 Madrid · December 2019</div>
+        <div class="press-src"><div class="press-src-dot"></div>United Nations · COP25 Madrid · 2019</div>
         <div class="press-title"><span data-en>Official Recognition at COP25 — Paris Agreement Alignment</span><span data-es>Reconocimiento Oficial en COP25 — Alineación con Acuerdo de París</span><span data-pt>Reconhecimento Oficial na COP25 — Alinhamento com Acordo de Paris</span></div>
-        <p class="press-excerpt"><span data-en>Uniting People International recognized at the UN Climate Change Conference for advancing climate action through sustainable modular construction innovation aligned with the Paris Agreement.</span><span data-es>Uniting People International reconocida en la Conferencia de la ONU sobre el Cambio Climático por avanzar en la acción climática mediante innovación en construcción modular sostenible alineada con el Acuerdo de París.</span><span data-pt>Uniting People International reconhecida na Conferência da ONU sobre Mudanças Climáticas por avançar na ação climática através de inovação em construção modular sustentável alinhada com o Acordo de Paris.</span></p>
+        <p class="press-excerpt"><span data-en>Uniting People International recognized at the United Nations Climate Change Conference in Madrid for advancing climate action through sustainable modular construction solutions.</span><span data-es>Uniting People International reconocida en la Conferencia de las Naciones Unidas sobre el Cambio Climático en Madrid por avanzar en la acción climática a través de soluciones de construcción modular sostenible.</span><span data-pt>Uniting People International reconhecida na Conferência das Nações Unidas sobre Mudanças Climáticas em Madri por avançar na ação climática através de soluções de construção modular sustentável.</span></p>
       </div>
     </div>
     <div class="press-card">
-      <img class="press-img short" src="https://images.unsplash.com/photo-1601933470096-0e34634ffcde?w=500&q=80&auto=format&fit=crop" alt="CEPAL ECLAC Latin America recognition">
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&q=80" alt="CEPAL ECLAC Recognition">
       <div class="press-body">
         <div class="press-src"><div class="press-src-dot"></div>CEPAL / ECLAC · United Nations · 2020</div>
-        <div class="press-title"><span data-en>CEPAL: Sole Latin American Company with Own Replicable Sustainable System</span><span data-es>CEPAL: Única empresa latinoamericana con sistema sostenible propio y replicable</span><span data-pt>CEPAL: Única empresa latino-americana com sistema sustentável próprio e replicável</span></div>
-        <p class="press-excerpt"><span data-en>The UN Economic Commission for Latin America and the Caribbean recognizes UniBlockSystem as the sole Latin American company with its own replicable sustainable construction system — establishing Uniting Technology as a global reference in circular economy construction.</span><span data-es>La Comisión Económica para América Latina y el Caribe de la ONU reconoce al UniBlockSystem como la única empresa latinoamericana con su propio sistema de construcción sostenible y replicable.</span><span data-pt>A Comissão Econômica para a América Latina e o Caribe da ONU reconhece o UniBlockSystem como a única empresa latino-americana com seu próprio sistema de construção sustentável e replicável.</span></p>
+        <div class="press-title"><span data-en>CEPAL Names UPI Sole Latin American Company with Own Replicable System</span><span data-es>CEPAL designa a UPI como única empresa latinoamericana con sistema sostenible propio y replicable</span><span data-pt>CEPAL nomeia UPI como única empresa latino-americana com sistema sustentável próprio e replicável</span></div>
+        <p class="press-excerpt"><span data-en>The UN Economic Commission for Latin America and the Caribbean recognizes the UniBlockSystem as the sole Latin American company with its own sustainable, replicable construction system.</span><span data-es>La Comisión Económica para América Latina y el Caribe de la ONU reconoce el UniBlockSystem como la única empresa latinoamericana con su propio sistema de construcción sostenible y replicable.</span><span data-pt>A Comissão Econômica para a América Latina e o Caribe da ONU reconhece o UniBlockSystem como a única empresa latino-americana com seu próprio sistema de construção sustentável e replicável.</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ RECOGNITION ══ -->
-<section id="recognition" style="background:var(--navy);border-color:var(--border-lt);padding:clamp(52px,7vw,80px) clamp(20px,4vw,48px)">
-  <div class="sec-head">
-    <div class="sec-ey" style="color:var(--cyan)"><span data-en>International Validation</span><span data-es>Validación Internacional</span><span data-pt>Validação Internacional</span></div>
-    <div class="sec-title" style="color:#fff"><span data-en>Recognition</span><span data-es>Reconocimientos</span><span data-pt>Reconhecimentos</span></div>
-  </div>
+<!-- RECOGNITION -->
+<section id="recognition" style="background:var(--navy);border-color:rgba(255,255,255,0.06)">
+  <div class="sec-ey" style="color:var(--cyan)"><span data-en>International Validation</span><span data-es>Validación Internacional</span><span data-pt>Validação Internacional</span></div>
+  <div class="sec-title" style="color:#fff"><span data-en>Recognition</span><span data-es>Reconocimientos</span><span data-pt>Reconhecimentos</span></div>
   <div class="awards-grid">
     <div class="award">
       <div class="award-yr">July 2019</div>
       <div class="award-org">European Union</div>
-      <p class="award-desc"><span data-en>Awarded under the React for the Climate initiative, presented by the EU Ambassador in Chile. Recognition of engineering innovation in sustainable construction at European institutional level, with global replication potential.</span><span data-es>Premiados en la iniciativa React for the Climate, presentado por el Embajador de la UE en Chile. Reconocimiento de innovación en ingeniería en construcción sostenible a nivel institucional europeo, con potencial de replicación global.</span><span data-pt>Premiado na iniciativa React for the Climate, apresentado pelo Embaixador da UE no Chile. Reconhecimento de inovação em engenharia em construção sustentável ao nível institucional europeu, com potencial de replicação global.</span></p>
+      <p class="award-desc"><span data-en>Awarded for UniBlockSystem™ under the React for the Climate initiative, presented by the EU Ambassador in Chile. Recognition of engineering innovation in sustainable construction at European institutional level.</span><span data-es>Reconocidos por UniBlockSystem™ en la iniciativa React for the Climate, presentado por el Embajador de la UE en Chile. Reconocimiento de innovación en ingeniería en construcción sostenible a nivel institucional europeo.</span><span data-pt>Premiado pelo UniBlockSystem™ na iniciativa React for the Climate, apresentado pelo Embaixador da UE no Chile. Reconhecimento de inovação em engenharia em construção sustentável ao nível institucional europeu.</span></p>
     </div>
     <div class="award">
       <div class="award-yr">December 2019</div>
-      <div class="award-org">COP25 Madrid — United Nations</div>
-      <p class="award-desc"><span data-en>Official acknowledgment from the United Nations Climate Change Conference in Madrid for advancing climate action through sustainable modular solutions, aligned with the Paris Agreement framework and global decarbonization goals.</span><span data-es>Reconocimiento oficial de la Conferencia de las Naciones Unidas sobre el Cambio Climático en Madrid, por avanzar en la acción climática mediante soluciones modulares sostenibles alineadas con el Acuerdo de París y los objetivos globales de descarbonización.</span><span data-pt>Reconhecimento oficial da Conferência das Nações Unidas sobre Mudanças Climáticas em Madri por avançar na ação climática através de soluções modulares sustentáveis alinhadas com o Acordo de Paris.</span></p>
+      <div class="award-org">COP25 Madrid — UN</div>
+      <p class="award-desc"><span data-en>Official acknowledgment from the United Nations Climate Change Conference for advancing climate action through sustainable modular solutions, aligned with the Paris Agreement framework and global decarbonization goals.</span><span data-es>Reconocimiento oficial de la Conferencia de las Naciones Unidas sobre el Cambio Climático por avanzar en la acción climática mediante soluciones modulares sostenibles, alineadas con el marco del Acuerdo de París y los objetivos globales de descarbonización.</span><span data-pt>Reconhecimento oficial da Conferência das Nações Unidas sobre Mudanças Climáticas por avançar na ação climática através de soluções modulares sustentáveis, alinhadas com o marco do Acordo de Paris e os objetivos globais de descarbonização.</span></p>
     </div>
     <div class="award">
       <div class="award-yr">November 2020</div>
       <div class="award-org">CEPAL / ECLAC</div>
-      <p class="award-desc"><span data-en>Recognized by the UN Economic Commission for Latin America and the Caribbean as the sole Latin American company with its own sustainable, replicable construction system — establishing Uniting Technology as a reference in circular economy and social infrastructure at continental scale.</span><span data-es>Reconocida por la CEPAL como la única empresa latinoamericana con su propio sistema de construcción sostenible y replicable — estableciendo a Uniting Technology como referencia en economía circular e infraestructura social a escala continental.</span><span data-pt>Reconhecida pela CEPAL como a única empresa latino-americana com seu próprio sistema de construção sustentável e replicável — estabelecendo a Uniting Technology como referência em economia circular e infraestrutura social em escala continental.</span></p>
+      <p class="award-desc"><span data-en>Recognized by the UN Economic Commission for Latin America and the Caribbean as the sole Latin American company with its own sustainable, replicable construction system — establishing Uniting Technology as a reference in circular economy construction.</span><span data-es>Reconocida por la Comisión Económica para América Latina y el Caribe de la ONU como la única empresa latinoamericana con su propio sistema de construcción sostenible y replicable — estableciendo a Uniting Technology como referencia en construcción de economía circular.</span><span data-pt>Reconhecida pela Comissão Econômica para a América Latina e o Caribe da ONU como a única empresa latino-americana com seu próprio sistema de construção sustentável e replicável — estabelecendo a Uniting Technology como referência em construção de economia circular.</span></p>
     </div>
   </div>
 </section>
 
-<!-- ══ CONTACT ══ -->
+<!-- CONTACT -->
 <section id="contact" style="background:var(--cream-dk)">
-  <div class="sec-head">
-    <div class="sec-ey"><span data-en>Get In Touch</span><span data-es>Contáctanos</span><span data-pt>Entre em Contato</span></div>
-    <div class="sec-title"><span data-en>Request a Strategic Briefing</span><span data-es>Solicitar un Briefing Estratégico</span><span data-pt>Solicitar um Briefing Estratégico</span></div>
+  <div class="sec-hdr">
+    <div>
+      <div class="sec-ey"><span data-en>Get In Touch</span><span data-es>Contáctanos</span><span data-pt>Entre em Contato</span></div>
+      <div class="sec-title"><span data-en>Request a Strategic Briefing</span><span data-es>Solicitar un Briefing Estratégico</span><span data-pt>Solicitar um Briefing Estratégico</span></div>
+    </div>
   </div>
   <div class="contact-grid">
-    <div class="contact-info">
-      <div class="ci-item">
-        <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 4 L8 9.5 L14.5 4" stroke="#00BFDF" stroke-width="1.2"/><rect x="1" y="3" width="14" height="10" rx="1.5" stroke="#fff" stroke-width="1" fill="none"/></svg></div>
-        <div><div class="ci-lbl"><span data-en>Email</span><span data-es>Correo</span><span data-pt>E-mail</span></div><a href="mailto:info@uniting-tech.com" class="ci-val">info@uniting-tech.com</a></div>
+    <div>
+      <div class="contact-info-item">
+        <div class="ci-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4 L8 9 L14 4" stroke="#00C4F0" stroke-width="1.2"/><rect x="1" y="3" width="14" height="10" rx="1.5" stroke="#fff" stroke-width="1" fill="none"/></svg>
+        </div>
+        <div>
+          <div class="ci-lbl"><span data-en>Email</span><span data-es>Correo</span><span data-pt>E-mail</span></div>
+          <a href="mailto:info@uniting-tech.com" class="ci-val">info@uniting-tech.com</a>
+        </div>
       </div>
-      <div class="ci-item">
-        <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5 C5 1.5 2 4.5 2 7.5 C2 11.5 8 14.5 8 14.5 C8 14.5 14 11.5 14 7.5 C14 4.5 11 1.5 8 1.5Z" stroke="#fff" stroke-width="1" fill="none"/><circle cx="8" cy="7.5" r="2" stroke="#00BFDF" stroke-width="1.2"/></svg></div>
-        <div><div class="ci-lbl"><span data-en>Headquarters</span><span data-es>Sede</span><span data-pt>Sede</span></div><span class="ci-val">Ghent, Belgium</span></div>
+      <div class="contact-info-item">
+        <div class="ci-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1 C5 1 2 4 2 7 C2 11 8 15 8 15 C8 15 14 11 14 7 C14 4 11 1 8 1Z" stroke="#fff" stroke-width="1" fill="none"/><circle cx="8" cy="7" r="2" stroke="#00C4F0" stroke-width="1.2"/></svg>
+        </div>
+        <div>
+          <div class="ci-lbl"><span data-en>Headquarters</span><span data-es>Sede</span><span data-pt>Sede</span></div>
+          <span class="ci-val">Ghent, Belgium</span>
+        </div>
       </div>
-      <div class="ci-item">
-        <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="1.5" width="13" height="13" rx="2" stroke="#fff" stroke-width="1" fill="none"/><line x1="5" y1="1.5" x2="5" y2="4.5" stroke="#fff" stroke-width="1"/><line x1="11" y1="1.5" x2="11" y2="4.5" stroke="#fff" stroke-width="1"/><line x1="1.5" y1="6" x2="14.5" y2="6" stroke="#00BFDF" stroke-width="0.8"/></svg></div>
-        <div><div class="ci-lbl"><span data-en>Business Hours</span><span data-es>Horario Comercial</span><span data-pt>Horário Comercial</span></div><span class="ci-val"><span data-en>Monday – Friday · 09:00–18:00 CET</span><span data-es>Lunes – Viernes · 09:00–18:00 CET</span><span data-pt>Segunda – Sexta · 09:00–18:00 CET</span></span></div>
+      <div class="contact-info-item">
+        <div class="ci-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="#fff" stroke-width="1" fill="none"/><path d="M5 4 L5 7 L8 9 L11 7 L11 4" fill="none" stroke="#00C4F0" stroke-width="1"/></svg>
+        </div>
+        <div>
+          <div class="ci-lbl"><span data-en>Business Hours</span><span data-es>Horario Comercial</span><span data-pt>Horário Comercial</span></div>
+          <span class="ci-val"><span data-en>Mon – Fri · 09:00–18:00 CET</span><span data-es>Lun – Vie · 09:00–18:00 CET</span><span data-pt>Seg – Sex · 09:00–18:00 CET</span></span>
+        </div>
       </div>
-      <div class="ci-item">
-        <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="14" height="14" rx="2" fill="#25D366"/><path d="M11.5 10C11.5 10 10.5 9.5 10 9.5C9.5 9.5 8.5 10 8.5 10C8.5 10 6.5 9 6 8.5C5.5 8 5 6 5 6C5 6 5.5 5 5.5 4.5C5.5 4 5 3 5 3L3.5 3C3.5 3 2.5 4.5 3.5 6.5C4.5 8.5 7.5 12 10 13C12.5 14 13.5 13 13.5 13V11.5C13.5 11.5 12.5 10.5 11.5 10Z" fill="white" stroke="white" stroke-width="0.2"/></svg></div>
-        <div><div class="ci-lbl">WhatsApp Business</div><a href="https://wa.me/32499817670" target="_blank" class="ci-val"><span data-en>+32 499 817 670 — Message us →</span><span data-es>+32 499 817 670 — Escríbenos →</span><span data-pt>+32 499 817 670 — Escreva-nos →</span></a></div>
+      <div class="contact-info-item">
+        <div class="ci-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="#fff" stroke-width="1" fill="none"/><line x1="5" y1="8" x2="11" y2="8" stroke="#00C4F0" stroke-width="1.2"/><line x1="8" y1="5" x2="8" y2="11" stroke="#00C4F0" stroke-width="1.2"/></svg>
+        </div>
+        <div>
+          <div class="ci-lbl"><span data-en>Schedule a Call</span><span data-es>Agendar una Llamada</span><span data-pt>Agendar uma Chamada</span></div>
+          <a href="#" class="ci-val" id="schedule-link"><span data-en>Book a 30-min briefing →</span><span data-es>Reservar un briefing de 30 min →</span><span data-pt>Reservar um briefing de 30 min →</span></a>
+        </div>
       </div>
-      <div class="ci-item">
-        <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#fff" stroke-width="1" fill="none"/><polyline points="8,4.5 8,8 10.5,10" stroke="#00BFDF" stroke-width="1.2" fill="none"/></svg></div>
-        <div><div class="ci-lbl"><span data-en>Schedule a Call</span><span data-es>Agendar una Llamada</span><span data-pt>Agendar uma Chamada</span></div><a href="#" class="ci-val"><span data-en>Book a 30-min strategic briefing →</span><span data-es>Reservar briefing estratégico de 30 min →</span><span data-pt>Reservar briefing estratégico de 30 min →</span></a></div>
+      <div class="contact-info-item">
+        <div class="ci-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="14" height="14" rx="3" fill="#128C7E"/><path d="M11 9.5 C11 9.5 10 9 9.5 9 C9 9 8 9.5 8 9.5 C8 9.5 6 8.5 5.5 8 C5 7.5 4.5 5.5 4.5 5.5 C4.5 5.5 5 4.5 5 4 C5 3.5 4.5 2.5 4.5 2.5 L3 2.5 C3 2.5 2 4 3 6 C4 8 7 12 9.5 13 C12 14 13 13 13 13 L13 11.5 C13 11.5 12 11 11 9.5Z" fill="white" stroke="white" stroke-width="0.3"/></svg>
+        </div>
+        <div>
+          <div class="ci-lbl">WhatsApp Business</div>
+          <a href="https://wa.me/32499817670" target="_blank" class="ci-val"><span data-en>Message us directly →</span><span data-es>Escríbenos directamente →</span><span data-pt>Escreva-nos diretamente →</span></a>
+        </div>
       </div>
     </div>
     <div>
       <form id="contact-form" onsubmit="submitForm(event)">
-        <div class="form-2col">
+        <div class="form-row">
           <div class="form-g">
             <label><span data-en>Full Name</span><span data-es>Nombre Completo</span><span data-pt>Nome Completo</span></label>
             <input type="text" name="name" required placeholder="John Smith">
@@ -1306,78 +684,72 @@ footer {
             <input type="text" name="organization" required placeholder="Company / Institution">
           </div>
         </div>
-        <div class="form-2col">
+        <div class="form-row">
           <div class="form-g">
-            <label>Email</label>
+            <label><span data-en>Email</span><span data-es>Correo Electrónico</span><span data-pt>E-mail</span></label>
             <input type="email" name="email" required placeholder="john@company.com">
           </div>
           <div class="form-g">
             <label><span data-en>Industry</span><span data-es>Industria</span><span data-pt>Indústria</span></label>
             <select name="industry">
-              <option value=""><span data-en>Select industry</span><span data-es>Seleccionar industria</span><span data-pt>Selecionar indústria</span></option>
-              <option value="mining">Mining</option>
+              <option value=""><span data-en>Select industry</span></option>
+              <option value="mining"><span data-en>Mining</span><span data-es>Minería</span><span data-pt>Mineração</span></option>
               <option value="energy">Energy / Oil & Gas</option>
-              <option value="infrastructure">Infrastructure</option>
-              <option value="government">Government</option>
-              <option value="social">Social Development</option>
-              <option value="other">Other</option>
+              <option value="infrastructure"><span data-en>Infrastructure</span><span data-es>Infraestructura</span><span data-pt>Infraestrutura</span></option>
+              <option value="government"><span data-en>Government</span><span data-es>Gobierno</span><span data-pt>Governo</span></option>
+              <option value="social"><span data-en>Social Development</span><span data-es>Desarrollo Social</span><span data-pt>Desenvolvimento Social</span></option>
+              <option value="other"><span data-en>Other</span><span data-es>Otro</span><span data-pt>Outro</span></option>
             </select>
           </div>
         </div>
         <div class="form-g">
+          <label><span data-en>Message / Project Brief</span><span data-es>Mensaje / Descripción del Proyecto</span><span data-pt>Mensagem / Descrição do Projeto</span></label>
+          <textarea name="message" placeholder="Describe your project, challenge or inquiry..."></textarea>
+        </div>
+        <div class="form-g">
           <label><span data-en>Service of Interest</span><span data-es>Servicio de Interés</span><span data-pt>Serviço de Interesse</span></label>
           <select name="service">
-            <option value="">— <span data-en>Select a service</span><span data-es>Seleccionar un servicio</span><span data-pt>Selecionar um serviço</span></option>
-            <option value="ecosystem">Industrial Ecosystem Development</option>
+            <option value=""><span data-en>Select a service</span></option>
+            <option value="ecosystem"><span data-en>Industrial Ecosystem Development</span></option>
             <option value="ai">AI Platform Engineering</option>
             <option value="hse">HSE Intelligence Systems</option>
             <option value="environmental">Environmental Control Systems</option>
             <option value="mineral">Mineral Intelligence</option>
-            <option value="workforce">Workforce Validation Systems</option>
+            <option value="workforce">Workforce Validation</option>
             <option value="construction">Modular Sustainable Construction</option>
             <option value="codevelopment">Strategic Co-Development</option>
             <option value="challenge">Global Challenge Participation</option>
           </select>
         </div>
-        <div class="form-g">
-          <label><span data-en>Message / Project Brief</span><span data-es>Mensaje / Descripción del Proyecto</span><span data-pt>Mensagem / Descrição do Projeto</span></label>
-          <textarea name="message" placeholder="Describe your project, challenge or area of interest..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">
-          <span data-en>Send Briefing Request</span>
-          <span data-es>Enviar Solicitud de Briefing</span>
-          <span data-pt>Enviar Solicitação de Briefing</span>
-        </button>
-        <p class="form-note">
-          <span data-en>You will receive a response from info@uniting-tech.com within 48 business hours.</span>
-          <span data-es>Recibirá una respuesta desde info@uniting-tech.com dentro de 48 horas hábiles.</span>
-          <span data-pt>Você receberá uma resposta de info@uniting-tech.com em até 48 horas úteis.</span>
-        </p>
+        <button type="submit" class="form-btn"><span data-en>Send Strategic Briefing Request</span><span data-es>Enviar Solicitud de Briefing Estratégico</span><span data-pt>Enviar Solicitação de Briefing Estratégico</span></button>
         <div class="form-status" id="form-status"></div>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-top">
+  <div class="foot-top">
     <div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="11" height="22" rx="2" fill="#ffffff"/><rect x="20" y="1" width="11" height="22" rx="2" fill="#ffffff"/><rect x="1" y="19" width="30" height="10" rx="2" fill="#00BFDF"/></svg>
+      <div class="foot-logo nav-logo" style="margin-bottom:0">
+        <svg width="28" height="28" viewBox="0 0 30 30" fill="none">
+          <rect x="1" y="1" width="10" height="21" rx="2" fill="#fff"/>
+          <rect x="19" y="1" width="10" height="21" rx="2" fill="#fff"/>
+          <rect x="1" y="18" width="28" height="9" rx="2" fill="#00C4F0"/>
+        </svg>
         <div>
-          <div style="font-size:11px;font-weight:600;letter-spacing:0.15em;color:#fff;text-transform:uppercase">Uniting Technology</div>
-          <div style="font-size:8px;letter-spacing:0.1em;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-top:2px">BV · Ghent, Belgium</div>
+          <div class="nav-logo-name">Uniting Technology</div>
+          <div class="nav-logo-sub">BV · Ghent, Belgium</div>
         </div>
       </div>
-      <p class="footer-tagline"><span data-en>Architects, developers and executors of ecosystems for critical industry — from Ghent, Belgium to the world.</span><span data-es>Arquitectos, desarrolladores y ejecutores de ecosistemas para la industria crítica — desde Gante, Bélgica al mundo.</span><span data-pt>Arquitetos, desenvolvedores e executores de ecossistemas para a indústria crítica — de Ghent, Bélgica para o mundo.</span></p>
-      <a href="mailto:info@uniting-tech.com" class="footer-email">info@uniting-tech.com</a>
+      <p class="foot-tagline"><span data-en>Architects, developers and executors of ecosystems for critical industry — from Belgium to the world.</span><span data-es>Arquitectos, desarrolladores y ejecutores de ecosistemas para la industria crítica — desde Bélgica al mundo.</span><span data-pt>Arquitetos, desenvolvedores e executores de ecossistemas para a indústria crítica — da Bélgica para o mundo.</span></p>
+      <a href="mailto:info@uniting-tech.com" style="font-size:12px;color:rgba(255,255,255,0.45);text-decoration:none">info@uniting-tech.com</a>
     </div>
     <div class="foot-col">
       <div class="foot-col-t"><span data-en>Company</span><span data-es>Empresa</span><span data-pt>Empresa</span></div>
       <a href="#about"><span data-en>About Us</span><span data-es>Nosotros</span><span data-pt>Sobre Nós</span></a>
       <a href="#services"><span data-en>Services</span><span data-es>Servicios</span><span data-pt>Serviços</span></a>
-      <a href="#industries"><span data-en>Industries</span><span data-es>Industries</span><span data-pt>Indústrias</span></a>
       <a href="#recognition"><span data-en>Recognition</span><span data-es>Reconocimientos</span><span data-pt>Reconhecimentos</span></a>
       <a href="#press"><span data-en>Press Room</span><span data-es>Sala de Prensa</span><span data-pt>Sala de Imprensa</span></a>
       <a href="#contact"><span data-en>Contact</span><span data-es>Contacto</span><span data-pt>Contato</span></a>
@@ -1394,147 +766,109 @@ footer {
     <div class="foot-col">
       <div class="foot-col-t"><span data-en>Industries</span><span data-es>Industrias</span><span data-pt>Indústrias</span></div>
       <a href="#industries"><span data-en>Mining</span><span data-es>Minería</span><span data-pt>Mineração</span></a>
-      <a href="#industries">Energy / Oil & Gas</a>
+      <a href="#industries"><span data-en>Energy</span><span data-es>Energía</span><span data-pt>Energia</span></a>
       <a href="#industries"><span data-en>Infrastructure</span><span data-es>Infraestructura</span><span data-pt>Infraestrutura</span></a>
       <a href="#industries"><span data-en>Government</span><span data-es>Gobierno</span><span data-pt>Governo</span></a>
       <a href="#industries"><span data-en>Social Development</span><span data-es>Desarrollo Social</span><span data-pt>Desenvolvimento Social</span></a>
-      <a href="#industries"><span data-en>Innovation & R&D</span><span data-es>Innovación e I+D</span><span data-pt>Inovação e P&D</span></a>
     </div>
   </div>
-  <div class="footer-bot">
-    <span class="footer-copy">© 2025 Uniting Technology BV · Ghent, Belgium ·
-      <span data-en>All rights reserved</span><span data-es>Todos los derechos reservados</span><span data-pt>Todos os direitos reservados</span> ·
-      <a href="/legal/privacy"><span data-en>Privacy Policy</span><span data-es>Política de Privacidad</span><span data-pt>Política de Privacidade</span></a>
-    </span>
-    <div class="footer-prods">
-      <span class="footer-prod">AIHumanity<sup>™</sup></span>
-      <span class="footer-prod">AIDeepMiner<sup>™</sup></span>
-      <span class="footer-prod">ADMS<sup>™</sup></span>
-      <span class="footer-prod">AISchool<sup>™</sup></span>
-      <span class="footer-prod">UMI<sup>™</sup></span>
-      <span class="footer-prod">UniBlockSystem<sup>™</sup></span>
+  <div class="foot-bot">
+    <span class="foot-copy">© 2025 Uniting Technology BV · Ghent, Belgium · <span data-en>All rights reserved</span><span data-es>Todos los derechos reservados</span><span data-pt>Todos os direitos reservados</span> · <a href="/legal/privacy" style="color:inherit;text-decoration:none"><span data-en>Privacy Policy</span><span data-es>Política de Privacidad</span><span data-pt>Política de Privacidade</span></a></span>
+    <div class="foot-prods">
+      <span class="foot-prod">AIHumanity<sup>™</sup></span>
+      <span class="foot-prod">AIDeepMiner<sup>™</sup></span>
+      <span class="foot-prod">ADMS<sup>™</sup></span>
+      <span class="foot-prod">AISchool<sup>™</sup></span>
+      <span class="foot-prod">UMI<sup>™</sup></span>
+      <span class="foot-prod">UniBlockSystem<sup>™</sup></span>
     </div>
   </div>
 </footer>
 
-<!-- ══ WHATSAPP FLOAT ══ -->
-<a href="https://wa.me/32499817670" target="_blank" rel="noopener" class="wa-float" title="WhatsApp Business — Uniting Technology">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.828L0 24l6.338-1.502A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.656-.528-5.157-1.441L3 22l1.474-3.778A9.962 9.962 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="white"/>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/32499817670" target="_blank" class="wa-float" title="WhatsApp Business">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.828L0 24l6.338-1.502A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.656-.528-5.157-1.441L3 22l1.474-3.778A9.962 9.962 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="white"/>
   </svg>
 </a>
 
 <script>
-// ── Language
+// Language system
 function setLang(l) {
   document.body.className = 'lang-' + l;
+  document.querySelectorAll('.lang-sw button').forEach(b => b.classList.remove('on'));
+  document.querySelectorAll('.lang-sw button').forEach(b => {
+    if (b.textContent.trim().toLowerCase() === l) b.classList.add('on');
+  });
   document.documentElement.lang = l;
-  document.querySelectorAll('.lang-sw button, .mobile-lang button').forEach(b => {
-    b.classList.toggle('on', b.textContent.trim().toLowerCase() === l);
-  });
-  localStorage.setItem('ut_lang', l);
 }
 
-// ── Mobile menu
-function toggleMobile() {
-  const menu = document.getElementById('mobileMenu');
-  const burger = document.getElementById('hamburger');
-  menu.classList.toggle('open');
-  burger.classList.toggle('open');
-  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
-}
-function closeMobile() {
-  document.getElementById('mobileMenu').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-// ── Nav scroll shadow
-window.addEventListener('scroll', () => {
-  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 10);
-}, { passive: true });
-
-// ── Smooth scroll with nav offset
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) {
-      e.preventDefault();
-      closeMobile();
-      window.scrollTo({ top: t.offsetTop - 70, behavior: 'smooth' });
-    }
-  });
-});
-
-// ── Contact form → n8n webhook
+// Contact form → n8n webhook
 async function submitForm(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
+  const btn = e.target.querySelector('.form-btn');
   const status = document.getElementById('form-status');
-  const lang = document.body.className.replace('lang-', '');
+  const data = Object.fromEntries(new FormData(e.target));
+  data.lang = document.body.className.replace('lang-', '');
+  data.source = 'uniting-tech.com/contact';
+  data.timestamp = new Date().toISOString();
 
-  const payload = {
-    ...Object.fromEntries(new FormData(e.target)),
-    lang,
-    source: window.location.href,
-    timestamp: new Date().toISOString(),
-    page: window.location.pathname
-  };
-
-  const origText = btn.textContent;
-  btn.textContent = '— Sending —';
+  btn.textContent = '...';
   btn.disabled = true;
-  status.style.display = 'none';
 
   try {
     const res = await fetch('http://167.172.226.162:5678/webhook/contact-form', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(data)
     });
-    if (!res.ok) throw new Error();
-    btn.textContent = '— Request Sent —';
-    status.style.display = 'block';
-    status.style.color = 'var(--navy-60)';
-    status.textContent = lang === 'es'
-      ? 'Solicitud recibida. Recibirá respuesta de info@uniting-tech.com en 48 horas hábiles.'
-      : lang === 'pt'
-      ? 'Solicitação recebida. Você receberá resposta de info@uniting-tech.com em 48 horas úteis.'
-      : 'Request received. You will hear back from info@uniting-tech.com within 48 business hours.';
-    e.target.reset();
+
+    if (res.ok) {
+      btn.textContent = '✓ Sent';
+      status.style.display = 'block';
+      status.textContent = document.body.className === 'lang-es'
+        ? 'Solicitud recibida. Nuestro equipo responderá dentro de 48 horas.'
+        : 'Request received. Our team will respond within 48 hours.';
+      e.target.reset();
+    } else {
+      throw new Error('Network error');
+    }
   } catch {
-    btn.textContent = origText;
     btn.disabled = false;
+    btn.textContent = 'Send Strategic Briefing Request';
     status.style.display = 'block';
-    status.style.color = '#8B2222';
-    status.textContent = 'Connection error. Please email info@uniting-tech.com directly.';
+    status.style.color = '#c0392b';
+    status.textContent = 'Please email us directly at info@uniting-tech.com';
   }
 }
 
-// ── Visit tracker (anonymous)
+// Page visit tracker
 (function() {
-  try {
-    fetch('http://167.172.226.162:3001/track', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        p: location.pathname,
-        r: document.referrer || '',
-        lang: navigator.language,
-        w: screen.width,
-        t: Date.now()
-      }),
-      keepalive: true
-    });
-  } catch(e) {}
+  const d = {
+    p: window.location.pathname,
+    r: document.referrer,
+    ua: navigator.userAgent,
+    t: Date.now(),
+    lang: navigator.language
+  };
+  fetch('http://167.172.226.162:3001/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(d),
+    keepalive: true
+  }).catch(() => {});
 })();
 
-// ── Init
-(function() {
-  const saved = localStorage.getItem('ut_lang');
-  if (saved && ['en','es','pt'].includes(saved)) setLang(saved);
-})();
+// Smooth scroll offset for fixed nav
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const t = document.querySelector(this.getAttribute('href'));
+    if (t) {
+      e.preventDefault();
+      window.scrollTo({ top: t.offsetTop - 100, behavior: 'smooth' });
+    }
+  });
+});
 </script>
 <script src="/js/main.js"></script>
 </body>
