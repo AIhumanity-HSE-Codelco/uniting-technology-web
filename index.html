@@ -150,4 +150,17 @@ $RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))
   document.body.appendChild(b);
 })();
 </script>
+
+<script>
+(function(){var K='ut_cc';function g(n){var v=document.cookie.match('(^|;)\s*'+n+'\s*=\s*([^;]+)');return v?v.pop():null;}
+function s(n,v,d){var e=new Date();e.setTime(e.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/;SameSite=Lax';}
+if(g(K))return;
+var style=document.createElement('style');
+style.textContent='#utck{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#0C1C30;border-top:1px solid rgba(0,191,223,0.25);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:Inter,system-ui,sans-serif}#utck .tx{flex:1}#utck .ti{font-size:13px;font-weight:600;color:#fff;margin-bottom:3px}#utck .de{font-size:11px;color:rgba(255,255,255,0.45)}#utck .de a{color:#00BFDF}#utck .bt{display:flex;gap:10px}#utck .be{background:transparent;border:0.5px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.55);font-size:11px;padding:8px 16px;border-radius:3px;cursor:pointer;font-family:inherit}#utck .ba{background:#00BFDF;border:none;color:#0C1C30;font-size:11px;font-weight:600;padding:8px 18px;border-radius:3px;cursor:pointer;font-family:inherit}';
+document.head.appendChild(style);
+var b=document.createElement('div');b.id='utck';
+b.innerHTML='<div class="tx"><div class="ti">We use cookies</div><div class="de">Essential and analytics cookies. <a href="/privacy.html">Privacy Policy</a></div></div><div class="bt"><button class="be" onclick="(function(){document.cookie=\'ut_cc=essential;expires=\'+new Date(Date.now()+365*864e5).toUTCString()+\';path=/\';document.getElementById(\'utck\').remove()})()">Essential only</button><button class="ba" onclick="(function(){document.cookie=\'ut_cc=all;expires=\'+new Date(Date.now()+365*864e5).toUTCString()+\';path=/\';document.getElementById(\'utck\').remove()})()">Accept all</button></div>';
+document.body.appendChild(b);
+})();
+</script>
 </body></html>
