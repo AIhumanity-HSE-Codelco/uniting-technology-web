@@ -784,26 +784,8 @@ footer {
 .hero-left-top > *:nth-child(4) { animation-delay: 0.30s; }
 .hero-left-top > *:nth-child(5) { animation-delay: 0.38s; }
 </style>
-
-<style>
-/* v5.0 — Force all cards visible */
-.ind-card, .service-card, .eco-card, .press-card, .rec-card {
-  opacity: 1 !important;
-  transform: none !important;
-  visibility: visible !important;
-}
-[data-animate] {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-.ind-card img {
-  filter: brightness(0.85) !important;
-}
-body { overflow-x: hidden; }
-input, select, textarea { font-size: 16px; }
-</style>
 </head>
-<body class="lang-en">
+<body class="lang-en" class="lang-en">
 
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mobileMenu">
@@ -1554,19 +1536,6 @@ async function submitForm(e) {
   if (saved && ['en','es','pt'].includes(saved)) setLang(saved);
 })();
 </script>
-
-<script>
-(function(){
-  if(document.cookie.indexOf('ut_cc=')>=0)return;
-  var s=document.createElement('style');
-  s.textContent='#utck{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#0C1C30;border-top:1px solid rgba(0,191,223,0.3);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:Inter,sans-serif}#utck .tx{flex:1}#utck .ti{font-size:13px;font-weight:600;color:#fff;margin-bottom:3px}#utck .de{font-size:11px;color:rgba(255,255,255,0.45)}#utck .de a{color:#00BFDF}#utck .bt{display:flex;gap:10px}#utck .be{background:transparent;border:0.5px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.55);font-size:11px;padding:8px 16px;border-radius:3px;cursor:pointer}#utck .ba{background:#00BFDF;border:none;color:#0C1C30;font-size:11px;font-weight:600;padding:8px 18px;border-radius:3px;cursor:pointer}';
-  document.head.appendChild(s);
-  var b=document.createElement('div');
-  b.id='utck';
-  b.innerHTML='<div class="tx"><div class="ti">We use cookies</div><div class="de">We use essential and analytics cookies. <a href="/privacy.html">Privacy Policy</a></div></div><div class="bt"><button class="be" onclick="document.cookie='ut_cc=essential;max-age=31536000;path=/';this.closest('#utck').remove()">Essential only</button><button class="ba" onclick="document.cookie='ut_cc=all;max-age=31536000;path=/';this.closest('#utck').remove()">Accept all</button></div>';
-  document.body.appendChild(b);
-})();
-</script>
-
+<script src="/js/main.js"></script>
 </body>
 </html>
