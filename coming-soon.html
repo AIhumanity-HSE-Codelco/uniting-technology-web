@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Under Construction — Uniting Technology BV</title>
+<meta name="description" content="This section is currently under construction. Uniting Technology BV — Ghent, Belgium.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #0C1C30;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAV */
+nav {
+  padding: 0 clamp(20px, 5vw, 52px);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+}
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none;
+}
+.logo svg { width: 30px; height: 30px; flex-shrink: 0; }
+.logo-name {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.16em; color: #fff;
+  text-transform: uppercase;
+}
+.logo-sub {
+  font-size: 8px; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.28);
+  text-transform: uppercase; margin-top: 2px;
+}
+
+/* MAIN */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 52px);
+  text-align: center;
+}
+
+.content {
+  max-width: 580px;
+  width: 100%;
+}
+
+/* Status indicator */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,191,223,0.1);
+  border: 0.5px solid rgba(0,191,223,0.3);
+  border-radius: 20px;
+  padding: 6px 16px;
+  margin-bottom: 36px;
+}
+.status-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #00BFDF;
+  animation: pulse 2s ease infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+.status-text {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #00BFDF;
+  font-family: 'DM Mono', monospace;
+}
+
+/* Heading */
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+h1 span { color: #00BFDF; }
+
+/* Rule */
+.rule {
+  width: 36px; height: 2px;
+  background: rgba(255,255,255,0.2);
+  margin: 24px auto;
+}
+
+/* Description */
+p {
+  font-size: clamp(13px, 1.4vw, 15px);
+  line-height: 1.75;
+  color: rgba(255,255,255,0.45);
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+/* Contact block */
+.contact-block {
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid rgba(255,255,255,0.09);
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+}
+.contact-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  font-family: 'DM Mono', monospace;
+  margin-bottom: 16px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 0.5px solid rgba(255,255,255,0.06);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.contact-item:last-child { border: none; padding-bottom: 0; }
+.contact-item:hover { opacity: 0.7; }
+.contact-icon {
+  width: 32px; height: 32px;
+  border-radius: 4px;
+  background: rgba(0,191,223,0.12);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.contact-info { text-align: left; }
+.contact-type {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  font-family: 'DM Mono', monospace;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.contact-val {
+  font-size: 13px;
+  color: rgba(255,255,255,0.78);
+  font-weight: 400;
+}
+
+/* Back button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.38);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  border-bottom: 0.5px solid rgba(255,255,255,0.15);
+  padding-bottom: 1px;
+  transition: color 0.2s;
+}
+.back-btn:hover { color: rgba(255,255,255,0.7); }
+
+/* FOOTER */
+footer {
+  padding: 16px clamp(20px, 5vw, 52px);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.foot-copy {
+  font-size: 10px;
+  color: rgba(255,255,255,0.18);
+  letter-spacing: 0.04em;
+  font-family: 'DM Mono', monospace;
+}
+.foot-tag {
+  font-size: 10px;
+  color: rgba(255,255,255,0.15);
+  letter-spacing: 0.08em;
+  font-family: 'DM Mono', monospace;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <svg viewBox="0 0 32 32" fill="none">
+      <rect x="1" y="1" width="11" height="21" rx="2" fill="#ffffff"/>
+      <rect x="20" y="1" width="11" height="21" rx="2" fill="#ffffff"/>
+      <rect x="1" y="18" width="30" height="10" rx="2" fill="#00BFDF"/>
+    </svg>
+    <div>
+      <div class="logo-name">Uniting Technology</div>
+      <div class="logo-sub">The Future. Engineered.</div>
+    </div>
+  </a>
+</nav>
+
+<main>
+  <div class="content">
+
+    <div class="status">
+      <div class="status-dot"></div>
+      <span class="status-text">Under Construction</span>
+    </div>
+
+    <h1>This section is<br>being <span>engineered.</span></h1>
+
+    <div class="rule"></div>
+
+    <p>
+      We are currently building this area of the Uniting Technology ecosystem.<br>
+      It will be available shortly. Thank you for your patience.
+    </p>
+
+    <div class="contact-block">
+      <div class="contact-label">For urgent inquiries or immediate assistance</div>
+
+      <a href="mailto:info@uniting-tech.com" class="contact-item">
+        <div class="contact-icon">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M1 3.5 L7.5 8.5 L14 3.5" stroke="#00BFDF" stroke-width="1.2"/>
+            <rect x="0.5" y="2.5" width="14" height="10" rx="1.5" stroke="rgba(255,255,255,0.5)" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div class="contact-info">
+          <div class="contact-type">Email</div>
+          <div class="contact-val">info@uniting-tech.com</div>
+        </div>
+      </a>
+
+      <a href="https://wa.me/32499817670" target="_blank" rel="noopener" class="contact-item">
+        <div class="contact-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#25D366"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.08-1.33C8.5 21.53 10.22 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.21-.45-4.54-1.24l-.32-.19-3.02.79.81-2.96-.21-.34A7.96 7.96 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z" fill="#25D366"/>
+          </svg>
+        </div>
+        <div class="contact-info">
+          <div class="contact-type">WhatsApp Business</div>
+          <div class="contact-val">+32 499 817 670</div>
+        </div>
+      </a>
+
+    </div>
+
+    <a href="/" class="back-btn">
+      ← Return to Uniting Technology
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <span class="foot-copy">© 2025 Uniting Technology BV · Ghent, Belgium</span>
+  <span class="foot-tag">THE FUTURE. ENGINEERED.</span>
+</footer>
+
+</body>
+</html>
