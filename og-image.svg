@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0C1C30"/>
+  
+  <!-- Grid lines subtle -->
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="6" height="630" fill="#00BFDF"/>
+  
+  <!-- Bottom accent bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,191,223,0.08)"/>
+  
+  <!-- Logo mark -->
+  <rect x="80" y="180" width="52" height="90" rx="6" fill="#ffffff"/>
+  <rect x="80" y="180" width="52" height="46" rx="6" fill="#ffffff"/>
+  <rect x="108" y="180" width="24" height="46" rx="0" fill="#0C1C30"/>
+  <rect x="148" y="180" width="52" height="90" rx="6" fill="#ffffff"/>
+  <rect x="80" y="252" width="120" height="18" rx="4" fill="#00BFDF"/>
+  
+  <!-- Company name -->
+  <text x="80" y="330" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-1">UNITING TECHNOLOGY</text>
+  
+  <!-- Divider -->
+  <rect x="80" y="348" width="60" height="3" fill="#00BFDF"/>
+  
+  <!-- Tagline -->
+  <text x="80" y="390" font-family="Arial, sans-serif" font-size="22" font-weight="300" fill="rgba(255,255,255,0.55)" letter-spacing="3">THE FUTURE. ENGINEERED.</text>
+  
+  <!-- Main message -->
+  <text x="80" y="460" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#ffffff" letter-spacing="-0.5">Architects, Developers and</text>
+  <text x="80" y="500" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#00BFDF" letter-spacing="-0.5">Executors of Ecosystems.</text>
+  
+  <!-- Location -->
+  <text x="80" y="555" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.35)" letter-spacing="2">GHENT, BELGIUM · GLOBAL OPERATIONS</text>
+  
+  <!-- Recognition badges right side -->
+  <rect x="820" y="180" width="300" height="70" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(0,191,223,0.2)" stroke-width="1"/>
+  <text x="970" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#00BFDF" letter-spacing="2">EUROPEAN UNION</text>
+  <text x="970" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">React for the Climate · 2019</text>
+  <text x="970" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">Ambassador Recognition</text>
+
+  <rect x="820" y="265" width="300" height="70" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(0,191,223,0.2)" stroke-width="1"/>
+  <text x="970" y="293" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#00BFDF" letter-spacing="2">UNITED NATIONS</text>
+  <text x="970" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">COP25 Madrid · 2019</text>
+  <text x="970" y="329" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">Paris Agreement Partner</text>
+
+  <rect x="820" y="350" width="300" height="70" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(0,191,223,0.2)" stroke-width="1"/>
+  <text x="970" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#00BFDF" letter-spacing="2">CEPAL / ECLAC</text>
+  <text x="970" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Sole LATAM System · 2020</text>
+  <text x="970" y="414" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">UN Economic Commission</text>
+
+  <!-- URL -->
+  <text x="820" y="560" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.4)" letter-spacing="1">www.uniting-tech.com</text>
+</svg>
